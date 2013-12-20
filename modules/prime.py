@@ -84,3 +84,10 @@ def dictionary_prime_factors (number):
     for factor in unique_factors:
         dictionary [factor] = factors.count (factor)
     return dictionary
+
+def divisor_count (number):
+    dictionary = dictionary_prime_factors (number)
+    divisors = 1
+    for power in dictionary.values ():
+        divisors *= (power + 1)
+    return divisors
