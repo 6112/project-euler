@@ -39,7 +39,10 @@ def is_prime (number):
 
 def prime_factors (number):
     """Returns a list of all primes that are divisors of a given integer
-    number."""
+    number.
+    
+    The list contains only prime numbers, whose product is equal to the original
+    number""" 
     if is_prime (number):
         return [number]
     factors = []
