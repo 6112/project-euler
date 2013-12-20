@@ -50,3 +50,15 @@ def prime_factors (number):
     for prime in primes (highest_divisor):
         if number % prime == 0:
             return prime_factors (prime) + prime_factors (number // prime)
+
+def dictionary_prime_factors (number):
+    """Returns the same list of prime factors as the prime_factors() function,
+    but reduces as a dictionary mapping each factor to its number of occurences.
+
+    For instance, [2,2,2, 3, 5,5] becomes {2:3, 3:1, 5:2}."""
+    factors = prime_factors (number)
+    unique_factors = list (set (factors))
+    dictionary = {}
+    for factor in unique_factors:
+        dictionary [factor] = factors.count (factor)
+    return dictionary
