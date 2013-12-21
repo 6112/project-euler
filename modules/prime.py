@@ -86,6 +86,9 @@ def dictionary_prime_factors (number):
     return dictionary
 
 def divisor_count (number):
+    """Returns the number of integers that can evenly divide a given number.
+
+    For instance, 8 has 4 divisors: 1, 2, 4, and 8."""
     dictionary = dictionary_prime_factors (number)
     divisors = 1
     for power in dictionary.values ():
