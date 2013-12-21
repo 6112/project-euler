@@ -16,7 +16,7 @@
 from modules.file import *
 
 def euler ():
-    pyramid = list_from_file ('data/18.txt')
+    pyramid = list_from_file ('data/018.txt')
     for y in range (len (pyramid) - 2, -1, -1):
         for x in range (y + 1):
             pyramid [y][x] += max (pyramid [y + 1][x], pyramid [y + 1][x + 1])
