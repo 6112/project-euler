@@ -15,7 +15,7 @@ def main ():
     if int (argv [1]) <= 0:
         print (argv [1] + ' is not greater than or equal to one.')
     try:
-        module = import_module ('problems.%03d'.format (problem))
+        module = import_module ('problems.%03d' % problem)
     except ImportError as error:
         print ('No solution for problem #' + argv [1] + '.')
         return
