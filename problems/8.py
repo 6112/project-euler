@@ -33,5 +33,3 @@ def euler ():
             product *= int (BIG_NUMBER [i])
         highest_product = max (highest_product, product)
     return highest_product
-
-print (euler ())

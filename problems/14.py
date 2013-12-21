@@ -36,5 +36,3 @@ def collatz (number):
         result = 1 + collatz (number * 3 + 1)
     collatz_dictionary [number] = result
     return result
-
-print (euler ())

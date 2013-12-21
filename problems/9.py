@@ -21,5 +21,3 @@ def euler ():
             c = sqrt (a * a + b * b)
             if c == int (c) and a + b + c == TARGET_VALUE:
                 return a * b * int (c)
-
-print (euler ())

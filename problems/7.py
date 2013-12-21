@@ -14,5 +14,3 @@ INDEX = 10000
 def euler ():
     generate_n_primes (INDEX + 1)
     return prime_list [INDEX]
-
-print (euler ())

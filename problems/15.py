@@ -18,5 +18,3 @@ def euler ():
         for x in range (1, GRID_SIZE):
             grid [y][x] = grid [y - 1][x] + grid [y][x - 1]
     return grid [GRID_SIZE - 1][GRID_SIZE - 1]
-
-print (euler ())

@@ -12,5 +12,3 @@ HIGHEST_VALUE = 2000000
 
 def euler ():
     return sum (primes (HIGHEST_VALUE))
-
-print (euler ())

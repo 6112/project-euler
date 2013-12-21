@@ -22,5 +22,3 @@ def euler ():
         previous_number += current_number
         current_number, previous_number = previous_number, current_number
     return accumulator
-
-print (euler ())

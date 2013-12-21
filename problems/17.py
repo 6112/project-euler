@@ -67,5 +67,3 @@ def number_name (number):
         if number % 100:
             name += ' and ' + number_name (number % 100)
         return name
-
-print (euler ())

@@ -33,5 +33,3 @@ def euler ():
             return triangle
         i += 1
         triangle += i
-
-print (euler ())

@@ -24,5 +24,3 @@ def euler ():
     for factor, power in zipped_factors.items ():
         product *= factor ** power
     return product
-
-print (euler ())

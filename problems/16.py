@@ -8,5 +8,3 @@
 
 def euler ():
     return sum (int (char) for char in str (2 ** 1000))
-
-print (euler ())

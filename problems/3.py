@@ -12,5 +12,3 @@ BIG_NUMBER = 600851475143
 
 def euler ():
     return max (prime_factors (BIG_NUMBER))
-
-print (euler ())

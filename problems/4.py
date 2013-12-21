@@ -15,5 +15,3 @@ def euler ():
             if str (product) == str (product) [::-1]:
                 highest_palindrome = max (highest_palindrome, product)
     return highest_palindrome
-
-print (euler ())

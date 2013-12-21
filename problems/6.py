@@ -19,5 +19,3 @@ def euler ():
     sum_of_squares = sum ([x * x for x in numbers])
     square_of_sum = sum (numbers) ** 2
     return square_of_sum - sum_of_squares
-
-print (euler ())

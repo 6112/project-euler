@@ -11,5 +11,3 @@ MAX_VALUE = 1000
 
 def euler ():
     return sum ([n for n in range (0, MAX_VALUE) if n % 5 == 0 or n % 3 == 0])
-
-print (euler ())

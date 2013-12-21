@@ -22,5 +22,3 @@ def euler ():
         for x in range (y + 1):
             pyramid [y][x] += max (pyramid [y + 1][x], pyramid [y + 1][x + 1])
     return pyramid [0][0]
-
-print (euler ())
