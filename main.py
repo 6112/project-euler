@@ -8,14 +8,14 @@ def main ():
         print ('Must supply a problem number.')
         return
     try:
-        int (argv [1])
+        problem = int (argv [1])
     except ValueError:
         print (argv [1] + ' is not a valid integer.')
         return
     if int (argv [1]) <= 0:
         print (argv [1] + ' is not greater than or equal to one.')
     try:
-        module = import_module ('problems.' + argv [1])
+        module = import_module ('problems.%03d'.format (problem))
     except ImportError as error:
         print ('No solution for problem #' + argv [1] + '.')
         return
