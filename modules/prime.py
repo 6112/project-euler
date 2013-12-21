@@ -59,6 +59,7 @@ def is_prime (number):
     highest_divisor = floor (sqrt (number))
     return all (number % prime != 0 for prime in primes (highest_divisor))
 
+prime_factors_cache = {}
 def prime_factors (number):
     """Returns a list of all primes that are divisors of a given integer
     number.
@@ -67,11 +68,15 @@ def prime_factors (number):
     number""" 
     if is_prime (number):
         return [number]
+    if number in prime_factors_cache:
+        return prime_factors_cache [number]
     factors = []
     highest_divisor = floor (sqrt (number))
     for prime in primes (highest_divisor):
         if number % prime == 0:
-            return prime_factors (prime) + prime_factors (number // prime)
+            factors = prime_factors (prime) + prime_factors (number // prime)
+            prime_factors_cache [number] = factors
+            return factors
 
 def dictionary_prime_factors (number):
     """Returns the same list of prime factors as the prime_factors() function,
@@ -86,11 +91,32 @@ def dictionary_prime_factors (number):
     return dictionary
 
 def divisor_count (number):
-    """Returns the number of integers that can evenly divide a given number.
-
-    For instance, 8 has 4 divisors: 1, 2, 4, and 8."""
+    """Returns the number of integers that can evenly divide a given number."""
     dictionary = dictionary_prime_factors (number)
     divisors = 1
     for power in dictionary.values ():
         divisors *= (power + 1)
     return divisors
+
+divisors_cache = {}
+def divisors (number):
+    """Returns a list of the divisors of a given number."""
+    if number in divisors_cache: 
+        return divisors_cache [number]
+    prime_divisors = prime_factors (number)
+    divisors_dictionary = {}
+    for prime in prime_divisors:
+        divisors_dictionary [prime] = True
+        factor = number // prime
+        divisors_dictionary [factor] = True
+        if not factor in prime_divisors:
+            xs = list (divisors_dictionary.items ())
+            xs += [(divisor, True) for divisor in divisors (factor)]
+            divisors_dictionary = dict (xs)
+    result = list (divisors_dictionary.keys ())
+    if not 1 in result:
+        result.append (1)
+    if not number in result:
+        result.append (number)
+    divisors_cache [number] = result
+    return result
