@@ -16,7 +16,7 @@ from modules.file import *
 
 def euler ():
     highest_product = 0
-    grid = list_from_file ('11.txt')
+    grid = list_from_file ('data/11.txt')
     for row in grid:
         for x in range (len (grid [0]) - 3):
             highest_product = max (highest_product, product (row [x : x + 4]))

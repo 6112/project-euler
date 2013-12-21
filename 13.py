@@ -8,6 +8,6 @@
 from modules.file import *
 
 def euler ():
-    return str (sum (flattened_list_from_file ('13.txt'))) [:10]
+    return str (sum (flattened_list_from_file ('data/13.txt'))) [:10]
 
 print (euler ())
