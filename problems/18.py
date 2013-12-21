@@ -1,4 +1,3 @@
-#!/usr/bin/python3
 ## SOLVED 21/12/13
 ## 1074
 
