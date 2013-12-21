@@ -5,13 +5,9 @@
 # Work out the first ten digits of the sum of the following one-hundred 50-digit
 # numbers.
 
+from modules.file import *
+
 def euler ():
-    accumulator = 0
-    with open ('13.txt') as numbers_file:
-        for line in numbers_file:
-            line = line.strip ()
-            number = int (line [:12])
-            accumulator += number
-    return str (accumulator) [:10]
+    return str (sum (flattened_list_from_file ('13.txt'))) [:10]
 
 print (euler ())

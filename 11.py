@@ -12,17 +12,11 @@
 # What is the greatest product of four adjacent numbers in the same direction
 # (up, down, left, right, or diagonally) in the 20×20 grid?
 
+from modules.file import *
+
 def euler ():
     highest_product = 0
-    grid = []
-    with open ('11.txt') as grid_file:
-        row = 0
-        for line_with_spaces in grid_file:
-            grid.append ([])
-            line = line_with_spaces.rstrip ()
-            for char_index in range (0, len (line), 3):
-                grid [row].append (int (line [char_index : char_index + 2]))
-            row += 1
+    grid = list_from_file ('11.txt')
     for row in grid:
         for x in range (len (grid [0]) - 3):
             highest_product = max (highest_product, product (row [x : x + 4]))
