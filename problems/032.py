@@ -2,11 +2,22 @@
 ## SOLVED 24/12/13
 ## 45228
 
+# We shall say that an n-digit number is pandigital if it makes use of all the
+# digits 1 to n exactly once; for example, the 5-digit number, 15234, is 1
+# through 5 pandigital.
+
+# The product 7254 is unusual, as the identity, 39 × 186 = 7254, containing
+# multiplicand, multiplier, and product is 1 through 9 pandigital.
+
+# Find the sum of all products whose multiplicand/multiplier/product identity
+# can be written as a 1 through 9 pandigital.
+
+# HINT: Some products can be obtained in more than one way so be sure to only
+# include it once in your sum.
+
 def euler ():
     products_cache = {}
     accumulator = 0
-    n = 0
-#    found = False
     for permutation in permutations ('123456789'):
         permutation = ''.join (permutation)
         products = valid_products (permutation)
@@ -28,16 +39,6 @@ def valid_products (permutation):
                 if multiplicand * multiplier == product:
                     products.append (product)
     return products
-
-#    for split_index_1 in range (1, len (permutation) - 1):
-#        for split_index_2 in range (split_index_1 + 1, len (permutation)):
-#            multiplicand = int (permutation [: split_index_1])
-#            multiplier = int (permutation [split_index_1 : split_index_2])
-#            product = int (permutation [split_index_2 :])
-#            if multiplicand * multiplier == product:
-#                return product
-
-    return None
 
 def permutations (tokens):
     if not tokens:
