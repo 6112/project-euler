@@ -40,6 +40,18 @@ def generate_n_primes (number_of_primes):
         number += 2
     return prime_list
 
+def all_primes ():
+    """Used as an iteartor for all prime numbers."""
+    LEAP = 1000
+    highest_prime = prime_list [-1]
+    while True:
+        highest_prime += LEAP
+        generate_primes (highest_prime)
+        iterator = 0
+        while iterator < len (prime_list):
+            yield prime_list [iterator]
+            iterator += 1
+
 def primes (highest_value):
     """Used as an iterator for all primes up to a maximum value."""
     generate_primes (highest_value)
@@ -56,6 +68,8 @@ def n_primes (number_of_primes):
 
 def is_prime (number):
     """Returns True if a given integer is a prime number."""
+    if number == 1:
+        return False
     highest_divisor = floor (sqrt (number))
     return all (number % prime != 0 for prime in primes (highest_divisor))
 
