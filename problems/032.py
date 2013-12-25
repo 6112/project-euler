@@ -15,6 +15,8 @@
 # HINT: Some products can be obtained in more than one way so be sure to only
 # include it once in your sum.
 
+from modules.sequence import *
+
 def euler ():
     products_cache = {}
     accumulator = 0
@@ -39,12 +41,3 @@ def valid_products (permutation):
                 if multiplicand * multiplier == product:
                     products.append (product)
     return products
-
-def permutations (tokens):
-    if not tokens:
-        yield []
-        return
-    for index, first in enumerate (tokens):
-        rest = tokens [: index] + tokens [index + 1:]
-        for permutation in permutations (rest):
-            yield [first] + permutation
