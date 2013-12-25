@@ -40,12 +40,11 @@ def generate_n_primes (number_of_primes):
         number += 2
     return prime_list
 
-def all_primes ():
+def all_primes (leap = 100000):
     """Used as an iteartor for all prime numbers."""
-    LEAP = 1000
     highest_prime = prime_list [-1]
     while True:
-        highest_prime += LEAP
+        highest_prime += leap
         generate_primes (highest_prime)
         iterator = 0
         while iterator < len (prime_list):
