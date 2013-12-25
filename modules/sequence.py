@@ -20,4 +20,4 @@ def rotations (tokens):
     rotation = tokens
     for iterator in range (len (tokens)):
         yield rotation
-        rotation = rotate (tokens)
+        rotation = rotate (rotation)
