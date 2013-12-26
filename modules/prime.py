@@ -72,7 +72,7 @@ def is_prime (number):
     highest_divisor = floor (sqrt (number))
     return all (number % prime != 0 for prime in primes (highest_divisor))
 
-prime_factors_cache = {}
+prime_factors_cache = {1: []}
 def prime_factors (number):
     """Returns a list of all primes that are divisors of a given integer
     number.
