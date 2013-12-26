@@ -12,23 +12,10 @@
 from math import sqrt
 
 def euler ():
-    highest_count = 0
-    highest_perimeter = 0
-    for perimeter in range (1, 1000):
-        count = integral_triangles_count (perimeter)
-        if count > highest_count:
-            highest_perimeter = perimeter
-            highest_count = count
-    return highest_perimeter
-
-def integral_triangles_count (perimeter):
-    count = 0
-    cache = {}
-    print (perimeter)
-    for a in range (1, perimeter // 2):
-        for b in range (1, perimeter - 2 * a):
+    triangle_counts = [0 for i in range (1, 1000)]
+    for a in range (1, 1000):
+        for b in range (1, 1000):
             c = sqrt (a * a + b * b)
-            if not c in cache and a + b + c == perimeter and int (c) == c:
-                count += 1
-                cache [c] = True
-    return count
+            if int (c) == c and a + b + c < 1000:
+                triangle_counts [int (a + b + c)] += 1 
+    return triangle_counts.index (max (triangle_counts))
