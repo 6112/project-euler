@@ -6,7 +6,10 @@
 
 # Find the sum of all the multiples of 3 or 5 below 1000.
 
-MAX_VALUE = 1000
+HIGHEST_VALUE = 1000
 
 def euler ():
-    return sum ([n for n in range (0, MAX_VALUE) if n % 5 == 0 or n % 3 == 0])
+    # construct the list of relevant numbers
+    numbers = (n for n in range (HIGHEST_VALUE) if n % 5 == 0 or n % 3 == 0)
+    # return the sum
+    return sum (numbers)

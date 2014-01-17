@@ -5,9 +5,12 @@
 
 # What is the largest prime factor of the number 600851475143 ?
 
-from modules.prime import *
+import modules.prime as prime
 
 BIG_NUMBER = 600851475143
 
 def euler ():
-    return max (prime_factors (BIG_NUMBER))
+    # compute the prime factors of the big number
+    factors = prime.prime_factors (BIG_NUMBER)
+    # return the highest of the prime factors
+    return max (factors)
