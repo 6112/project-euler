@@ -21,6 +21,7 @@
 # of two abundant numbers.
 
 from modules.prime import *
+from math import floor, ceil, sqrt
 
 MAX_VALUE = 28123
 
@@ -40,5 +41,26 @@ def euler ():
             accumulator += number
     return accumulator
 
+def list_of_abundants (highest_value):
+    abundant_list = []
+    for number in range (1, highest_value):
+        if is_abundant (number):
+            abundant_list.append (number)
+    return abundant_list
+
+def sum_of_divisors (number):
+    product = 1
+    divisor = 2
+    while divisor * divisor <= number:
+        multiplicand = 1
+        while number % divisor == 0:
+            multiplicand = multiplicand * divisor + 1
+            number //= divisor
+        product *= multiplicand
+        divisor += 1
+    if number > 1:
+        product *= 1 + number
+    return product
+
 def is_abundant (number):
-    return sum (divisors (number)) - number > number
+    return sum_of_divisors (number) > number + number
