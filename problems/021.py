@@ -1,3 +1,4 @@
+# encoding=utf-8
 ## SOLVED 21/12/13
 ## 31626
 
@@ -13,17 +14,31 @@
 
 # Evaluate the sum of all the amicable numbers under 10000.
 
-from modules.prime import *
+import modules.prime as prime
 
-MAX_VALUE = 10000
+HIGHEST_VALUE = 10000
 
 def euler ():
+    # accumulator for the sum
     accumulator = 0
-    for a in range (1, 10000):
+    # for each value of a in the given range
+    for a in range (1, HIGHEST_VALUE):
+        # calculate the b
         b = d (a)
+        # if a and b are amicable
         if b != 0 and d (b) == a and a < b:
+            # add them to the sum
             accumulator += b + a
+    # return the sum accumulator
     return accumulator
 
 def d (number):
+    """Return the sum of the divisors of a given number.
+    
+    Divisors exclude the number itself, i.e.:
+
+    d (2) = 1 = 1
+    d (4) = 1 + 2 = 3
+    d (6) = 1 + 2 + 3 = 6
+    """
     return sum (divisors (number)) - number

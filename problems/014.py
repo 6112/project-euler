@@ -1,3 +1,4 @@
+# encoding=utf-8
 ## SOLVED 20/12/13
 ## 837799
 
@@ -18,20 +19,27 @@
 
 # NOTE: Once the chain starts the terms are allowed to go above one million.
 
-from modules.prime import *
+import modules.prime as prime
 
-MAX_VALUE = 1000000
+HIGHEST_NUMBER = 1000000
 
 def euler ():
-    return max ((collatz (n), n) for n in range (1, MAX_VALUE)) [1]
+    # return the number that generates the longest collatz sequence
+    return max ((collatz (n), n) for n in range (1, HIGHEST_NUMBER)) [1]
 
-collatz_dictionary = {1: 1}
+# use a dictionary to optimize the collatz sequence
+collatz_cache = {1: 1}
 def collatz (number):
-    if number in collatz_dictionary:
-        return collatz_dictionary [number]
-    elif number % 2 == 0:
+    """Return the length of the collatz sequence starting at a given number."""
+    # use cache if possible
+    if number in collatz_cache:
+        return collatz_cache [number]
+    # compute the result using recursion
+    if number % 2 == 0:
         result = 1 + collatz (number // 2)
     else:
         result = 1 + collatz (number * 3 + 1)
-    collatz_dictionary [number] = result
+    # set it in the cache
+    collatz_cache [number] = result
+    # return the result
     return result

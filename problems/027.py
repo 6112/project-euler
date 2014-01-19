@@ -26,7 +26,7 @@
 # that produces the maximum number of primes for consecutive values of n,
 # starting with n = 0.
 
-from modules.prime import *
+import modules.prime as prime
 
 def euler ():
     longest_sequence = 0
@@ -43,6 +43,6 @@ def sequence_length (a, b):
     def f ():
         return n ** 2 + a * n + b
     n = 0
-    while f () > 1 and is_prime (f ()):
+    while f () > 1 and prime.is_prime (f ()):
         n += 1
     return n

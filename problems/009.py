@@ -1,3 +1,4 @@
+# encoding=utf-8
 ## SOLVED 19/12/13
 ## 31875000
 
@@ -9,13 +10,16 @@
 # There exists exactly one Pythagorean triplet for which a + b + c = 1000.
 # Find the product abc.
 
-from math import sqrt
+import math
 
 TARGET_VALUE = 1000
 
 def euler ():
-    for a in range (1, 1000):
-        for b in range (1, 1000):
-            c = sqrt (a * a + b * b)
+    # for each (a, b) pair
+    for a in range (1, TARGET_VALUE):
+        for b in range (1, TARGET_VALUE):
+            # calculate c
+            c = math.sqrt (a * a + b * b)
+            # return if the pair satisfies a+b+c=1000 and c is natural
             if c == int (c) and a + b + c == TARGET_VALUE:
                 return a * b * int (c)

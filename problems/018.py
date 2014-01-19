@@ -1,3 +1,4 @@
+# encoding=utf-8
 ## SOLVED 21/12/13
 ## 1074
 
@@ -11,13 +12,18 @@
 
 # That is, 3 + 7 + 4 + 9 = 23.
 
-# Find the maximum total from top to bottom of the triangle below:
+# Find the maximum total from top to bottom of the triangle below [018.txt]
 
-from modules.file import *
+import modules.file as fileutils
 
 def euler ():
-    pyramid = list_from_file ('data/018.txt')
+    # read the pyramid from the file
+    pyramid = fileutils.list_from_file ('data/018.txt')
+    # for each row, starting at the second from the bottom and going up
     for y in range (len (pyramid) - 2, -1, -1):
+        # for each element of that row
         for x in range (y + 1):
+            # add to it the highest of the two directly below it
             pyramid [y][x] += max (pyramid [y + 1][x], pyramid [y + 1][x + 1])
+    # return the value at the top of the pyramid
     return pyramid [0][0]

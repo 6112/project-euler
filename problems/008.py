@@ -1,3 +1,4 @@
+# encoding=utf-8
 ## SOLVED 19/12/13
 ## 40824
 
@@ -25,10 +26,15 @@ BIG_NUMBER = ("73167176531330624919225119674426574742355349194934"
     + "71636269561882670428252483600823257530420752963450")
 
 def euler ():
+    # highest product for five consecutive digits
     highest_product = 0
-    for index in range (len (BIG_NUMBER) - 5):
+    # for each digit, until 4 digits before the end
+    for index in range (len (BIG_NUMBER) - 4):
+        # calculate the product of the five digits
         product = 1
         for i in range (index, index + 5):
             product *= int (BIG_NUMBER [i])
+        # set the highest product if appropriate
         highest_product = max (highest_product, product)
+    # return the highest product
     return highest_product

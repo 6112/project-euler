@@ -1,3 +1,4 @@
+# encoding=utf-8
 ## SOLVED 21/12/13
 ## 648
 
@@ -11,9 +12,11 @@
 NUMBER = 100
 
 def euler ():
+    # return the sum of the digits of 100!
     return sum (map (int, str (factorial (NUMBER))))
 
 def factorial (number):
+    """Return the factorial of a number."""
     accumulator = 1
     for n in range (1, number + 1):
         accumulator *= n

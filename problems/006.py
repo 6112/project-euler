@@ -1,3 +1,4 @@
+# encoding=utf-8
 ## SOLVED 19/12/13
 ## 25164150
 
@@ -16,7 +17,11 @@
 HIGHEST_NUMBER = 100
 
 def euler ():
+    # list of numbers to use
     numbers = range (1, HIGHEST_NUMBER + 1)
+    # sum of the squares of each number
     sum_of_squares = sum ([x * x for x in numbers])
+    # square of the sum of those numbers
     square_of_sum = sum (numbers) ** 2
+    # return the difference of the two
     return square_of_sum - sum_of_squares

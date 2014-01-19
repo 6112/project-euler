@@ -22,13 +22,17 @@
 # What is the value of the first triangle number to have over five hundred
 # divisors?
 
-from modules.prime import *
+import modules.prime as prime
 
 def euler ():
     i = 1
     triangle = 1
+    # for each triangle number
     while True:
-        if divisor_count (triangle) > 500:
+        # if the number has over 500 divisors
+        if prime.divisor_count (triangle) > 500:
+            # return it
             return triangle
+        # continue to next triangle number
         i += 1
         triangle += i

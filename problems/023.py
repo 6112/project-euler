@@ -20,9 +20,6 @@
 # Find the sum of all the positive integers which cannot be written as the sum
 # of two abundant numbers.
 
-from modules.prime import *
-from math import floor, ceil, sqrt
-
 MAX_VALUE = 28123
 
 def euler ():
@@ -42,6 +39,7 @@ def euler ():
     return accumulator
 
 def list_of_abundants (highest_value):
+    """Return the list of abundant numbers from 1 to the given number."""
     abundant_list = []
     for number in range (1, highest_value):
         if is_abundant (number):
@@ -49,6 +47,7 @@ def list_of_abundants (highest_value):
     return abundant_list
 
 def sum_of_divisors (number):
+    """Return the sum of the divisors of a given number."""
     product = 1
     divisor = 2
     while divisor * divisor <= number:
@@ -63,4 +62,8 @@ def sum_of_divisors (number):
     return product
 
 def is_abundant (number):
+    """Return True iff the given number is abundant.
+
+    A number is abundant iff the sum of its divisors is higher than itself.
+    """
     return sum_of_divisors (number) > number + number

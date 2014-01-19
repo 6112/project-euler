@@ -14,16 +14,23 @@
 
 # What is the total of all the name scores in the file?
 
-from modules.file import *
+import modules.file as fileutils
 
 def euler ():
-    names = flattened_list_from_file ('data/022.txt', separator = ',',
+    # read the names from the file
+    names = fileutils.flattened_list_from_file ('data/022.txt', separator = ',',
       convert_to = str)
+    # remove the quotes surrounding the name
     names = [name.replace ('"', '') for name in names]
+    # sort the names alphabetically
     names.sort ()
+    # accumulator for the total of the name scores
     accumulator = 0
     for index, name in enumerate (names):
-        value = sum (ord (letter) - ord ('A') + 1 for letter in name)
-        value *= (index + 1)
-        accumulator += value
+        # calculate the name score
+        score = sum (ord (letter) - ord ('A') + 1 for letter in name)
+        score *= (index + 1)
+        # add the score to the accumulator
+        accumulator += score
+    # return the accumulator
     return accumulator

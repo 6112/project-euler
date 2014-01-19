@@ -1,3 +1,4 @@
+# encoding=utf-8
 ## SOLVED 19/12/13
 ## 104743
 
@@ -6,10 +7,12 @@
 
 # What is the 10 001st prime number?
 
-from modules.prime import *
+import modules.prime as prime
 
 INDEX = 10000
 
 def euler ():
-    generate_n_primes (INDEX + 1)
-    return prime_list [INDEX]
+    # generate 10001 prime numbers
+    prime.generate_n_primes (INDEX + 1)
+    # return the 10001st prime number
+    return prime.prime_list [INDEX]
