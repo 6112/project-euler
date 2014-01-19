@@ -9,13 +9,13 @@
 
 # For which value of p ≤ 1000, is the number of solutions maximised?
 
-from math import sqrt
+import math
 
 def euler ():
     triangle_counts = [0 for i in range (1, 1000)]
     for a in range (1, 1000):
         for b in range (1, 1000):
-            c = sqrt (a * a + b * b)
+            c = math.sqrt (a * a + b * b)
             if int (c) == c and a + b + c < 1000:
                 triangle_counts [int (a + b + c)] += 1 
     return triangle_counts.index (max (triangle_counts))
