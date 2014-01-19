@@ -1,3 +1,4 @@
+# encoding=utf-8
 ## SOLVED 19/12/13
 ## 906609
 
