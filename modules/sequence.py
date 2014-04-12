@@ -8,6 +8,18 @@ def permutations (tokens):
         for permutation in permutations (rest):
             yield [first] + permutation
 
+def is_permutation(xs, ys):
+    """Returns True iff the two lists are permutations of eachother."""
+    for x in xs:
+        if not x in ys:
+            return False
+    for y in ys:
+        if not y in xs:
+            return False
+    if len(xs) != len(ys):
+        return False
+    return True
+
 def left_truncations (tokens):
     """Used as an iterator for all truncations of a sequence, from the left.
     For instance, left_truncations('123') yields '123', '12', and '1'."""
