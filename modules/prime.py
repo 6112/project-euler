@@ -70,6 +70,7 @@ def is_prime (number):
     if number == 1:
         return False
     highest_divisor = floor (sqrt (number))
+    generate_primes(highest_divisor)
     return all (number % prime != 0 for prime in primes (highest_divisor))
 
 prime_factors_cache = {1: []}
