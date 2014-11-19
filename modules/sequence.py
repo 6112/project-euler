@@ -3,22 +3,17 @@ def permutations (tokens):
     if not tokens:
         yield []
         return
+    encountered = set ()
     for index, first in enumerate (tokens):
-        rest = tokens [: index] + tokens [index + 1:]
-        for permutation in permutations (rest):
-            yield [first] + permutation
+        if first not in encountered:
+            rest = tokens [: index] + tokens [index + 1:]
+            encountered.add(first)
+            for permutation in permutations (rest):
+                yield [first] + permutation
 
 def is_permutation(xs, ys):
     """Returns True iff the two lists are permutations of eachother."""
-    for x in xs:
-        if not x in ys:
-            return False
-    for y in ys:
-        if not y in xs:
-            return False
-    if len(xs) != len(ys):
-        return False
-    return True
+    return sorted(xs) == sorted(ys)
 
 def left_truncations (tokens):
     """Used as an iterator for all truncations of a sequence, from the left.
