@@ -7,13 +7,17 @@ from math import ceil
 
 def euler():
     for n in range(346, 6000):
+        # number of cubes that are permutations of n^3
         cube_permutations = 0
         digits = str(n * n * n)
         maximum = maximum_for(digits)
+        # for each number from n to maximum (see maximum_for()), check if its
+        # cube is a permutation of n
         for m in range(n, maximum):
             cube = m * m * m
             if is_permutation(str(cube), digits):
                 cube_permutations += 1
+        # return it if it has the right number of permutations
         if cube_permutations == 5:
             return n ** 3
 
