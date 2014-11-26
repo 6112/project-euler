@@ -30,14 +30,20 @@
 
 from math import sqrt
 
+# highest number to check for the period
+HIGHEST_SQUARE = 10000
+
 def euler():
     solution_count = 0
-    for n in range(2, 10001):
+    for n in range(2, HIGHEST_SQUARE + 1):
         if continued_fraction(n) % 2 == 1:
             solution_count += 1
     return solution_count
 
-# uses the algorithm described on this Wikipedia page:
+# return the number of partial values in the continued fraction for the square
+# root of n
+#
+# use the algorithm described on this Wikipedia page:
 # http://en.wikipedia.org/wiki/Methods_of_computing_square_roots
 # in the "Continued fraction expansion" section
 def continued_fraction(n):
