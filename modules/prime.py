@@ -74,7 +74,7 @@ def is_prime (number):
     return all (number % prime != 0 for prime in primes (highest_divisor))
 
 prime_factors_cache = {1: []}
-def prime_factors (number):
+def prime_factors (number, use_cache = True):
     """Returns a list of all primes that are divisors of a given integer
     number.
     
@@ -89,35 +89,36 @@ def prime_factors (number):
     for prime in primes (highest_divisor):
         if number % prime == 0:
             factors = prime_factors (prime) + prime_factors (number // prime)
-            prime_factors_cache [number] = factors
+            if use_cache:
+                prime_factors_cache [number] = factors
             return factors
 
-def dictionary_prime_factors (number):
+def dictionary_prime_factors (number, use_cache = True):
     """Returns the same list of prime factors as the prime_factors() function,
     but reduces as a dictionary mapping each factor to its number of occurences.
 
     For instance, [2,2,2, 3, 5,5] becomes {2:3, 3:1, 5:2}."""
-    factors = prime_factors (number)
+    factors = prime_factors (number, use_cache)
     unique_factors = list (set (factors))
     dictionary = {}
     for factor in unique_factors:
         dictionary [factor] = factors.count (factor)
     return dictionary
 
-def divisor_count (number):
+def divisor_count (number, use_cache = True):
     """Returns the number of integers that can evenly divide a given number."""
-    dictionary = dictionary_prime_factors (number)
+    dictionary = dictionary_prime_factors (number, use_cache)
     divisors = 1
     for power in dictionary.values ():
         divisors *= (power + 1)
     return divisors
 
 divisors_cache = {}
-def divisors (number):
+def divisors (number, use_cache = True):
     """Returns a list of the divisors of a given number."""
     if number in divisors_cache: 
         return divisors_cache [number]
-    prime_divisors = prime_factors (number)
+    prime_divisors = prime_factors (number, use_cache)
     divisors_dictionary = {}
     for prime in prime_divisors:
         divisors_dictionary [prime] = True
@@ -132,5 +133,6 @@ def divisors (number):
         result.append (1)
     if not number in result:
         result.append (number)
-    divisors_cache [number] = result
+    if use_cache:
+        divisors_cache [number] = result
     return result
