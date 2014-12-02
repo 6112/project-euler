@@ -18,6 +18,7 @@
 
 from helpers.prime import *
 from helpers.sequence import *
+from helpers.totient import *
 
 from math import sqrt, ceil
 
@@ -33,9 +34,3 @@ def euler():
                     t = totient(n)
                     if is_permutation(str(n), str(t)):
                         return n
-
-def totient(n):
-    t = n
-    for p in set(prime_factors(t)):
-        t *= 1 - 1 / p
-    return round(t)
