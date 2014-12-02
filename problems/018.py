@@ -14,7 +14,7 @@
 
 # Find the maximum total from top to bottom of the triangle below [018.txt]
 
-import modules.file as fileutils
+import helpers.file as fileutils
 
 def euler ():
     # read the pyramid from the file

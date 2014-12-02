@@ -31,7 +31,7 @@
 # form 16- and 17-digit strings. What is the maximum 16-digit string for a
 # "magic" 5-gon ring?
 
-from modules.sequence import n_permutations
+from helpers.sequence import n_permutations
 
 # numbers used in the magic pentagon
 NUMBERS = list(range(1,11))

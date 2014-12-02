@@ -19,7 +19,7 @@
 
 # NOTE: Once the chain starts the terms are allowed to go above one million.
 
-import modules.prime as prime
+import helpers.prime as prime
 
 HIGHEST_NUMBER = 1000000
 

@@ -9,7 +9,7 @@
 # Find the smallest cube for which exactly five permutations of its digits are
 # cube.
 
-from modules.sequence import is_permutation
+from helpers.sequence import is_permutation
 from math import ceil
 
 def euler():

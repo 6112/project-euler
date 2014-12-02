@@ -15,7 +15,7 @@
 # HINT: Some products can be obtained in more than one way so be sure to only
 # include it once in your sum.
 
-from modules.sequence import *
+from helpers.sequence import *
 
 def euler ():
     products_cache = {}

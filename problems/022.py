@@ -14,7 +14,7 @@
 
 # What is the total of all the name scores in the file?
 
-import modules.file as fileutils
+import helpers.file as fileutils
 
 def euler ():
     # read the names from the file

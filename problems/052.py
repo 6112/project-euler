@@ -8,7 +8,7 @@
 # Find the smallest positive integer, x, such that 2x, 3x, 4x, 5x, and 6x,
 # contain the same digits.
 
-import modules.sequence as sequence
+import helpers.sequence as sequence
 
 # list of factors for the multiplications that have to be checked
 FACTORS = [2, 3, 4, 5, 6]

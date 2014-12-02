@@ -16,7 +16,7 @@
 # containing nearly two-thousand common English words, how many are triangle
 # words?
 
-import modules.file as fileutils
+import helpers.file as fileutils
 
 # arbitrary value for the highest reachable triangle number
 HIGHEST_TRIANGLE = 1000

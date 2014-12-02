@@ -6,7 +6,7 @@
 
 # What is the largest prime factor of the number 600851475143 ?
 
-import modules.prime as prime
+import helpers.prime as prime
 
 BIG_NUMBER = 600851475143
 

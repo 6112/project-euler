@@ -16,8 +16,8 @@
 # Find the value of n, 1 < n < 10**7, for which φ(n) is a permutation of n and
 # the ratio n/φ(n) produces a minimum.
 
-from modules.prime import *
-from modules.sequence import *
+from helpers.prime import *
+from helpers.sequence import *
 
 from math import sqrt, ceil
 

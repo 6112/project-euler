@@ -22,7 +22,7 @@
 # What is the value of the first triangle number to have over five hundred
 # divisors?
 
-import modules.prime as prime
+import helpers.prime as prime
 
 def euler ():
     i = 1

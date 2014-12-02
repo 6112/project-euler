@@ -14,7 +14,7 @@
 
 # Evaluate the sum of all the amicable numbers under 10000.
 
-import modules.prime as prime
+import helpers.prime as prime
 
 HIGHEST_VALUE = 10000
 

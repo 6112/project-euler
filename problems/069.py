@@ -22,7 +22,7 @@
 
 # Find the value of n ≤ 1,000,000 for which n/φ(n) is a maximum.
 
-from modules.prime import primes
+from helpers.prime import primes
 
 # maximum value for n
 HIGHEST_N = 1000000

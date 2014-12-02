@@ -12,8 +12,8 @@
 # What 12-digit number do you form by concatenating the three terms in this
 # sequence?
 
-import modules.prime as prime
-import modules.sequence as sequence
+import helpers.prime as prime
+import helpers.sequence as sequence
 
 # number of digits for each prime number
 DIGITS = 4

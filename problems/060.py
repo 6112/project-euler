@@ -11,7 +11,7 @@
 # Find the lowest sum for a set of five primes for which any two primes
 # concatenate to produce another prime.
 
-from modules.prime import *
+from helpers.prime import *
 
 # max prime to use for testing things
 HIGHEST_VALUE = 10000

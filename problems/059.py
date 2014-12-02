@@ -29,7 +29,7 @@
 # text must contain common English words, decrypt the message and find the sum
 # of the ASCII values in the original text.
 
-from modules.file import flattened_list_from_file
+from helpers.file import flattened_list_from_file
 import re
 
 def euler():

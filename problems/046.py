@@ -19,7 +19,7 @@
 
 import math
 
-import modules.prime as primeutils
+import helpers.prime as primeutils
 
 def euler():
     # for each odd number starting at 3

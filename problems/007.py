@@ -7,7 +7,7 @@
 
 # What is the 10 001st prime number?
 
-import modules.prime as prime
+import helpers.prime as prime
 
 INDEX = 10000
 

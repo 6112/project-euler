@@ -15,7 +15,7 @@
 # Which prime, below one-million, can be written as the sum of the most
 # consecutive primes?
 
-import modules.prime as prime
+import helpers.prime as prime
 
 # highest value for the resulting prime
 HIGHEST_PRIME = 1000000

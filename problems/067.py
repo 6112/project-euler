@@ -22,7 +22,7 @@
 # billion years to check them all. There is an efficient algorithm to solve it.
 # ;o)
 
-import modules.file as fileutils
+import helpers.file as fileutils
 
 def euler ():
     # read the pyramid from the file

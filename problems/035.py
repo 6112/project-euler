@@ -10,8 +10,8 @@
 
 # How many circular primes are there below one million?
 
-from modules.prime import *
-from modules.sequence import *
+from helpers.prime import *
+from helpers.sequence import *
 
 import bisect
 

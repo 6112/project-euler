@@ -15,7 +15,7 @@
 # necessarily adjacent digits) with the same digit, is part of an eight prime
 # value family.
 
-import modules.prime as prime
+import helpers.prime as prime
 
 # number of replacements of digits that have to work
 FAMILY_SIZE = 8

@@ -8,8 +8,8 @@
 
 # What is the largest n-digit pandigital prime that exists?
 
-import modules.prime as prime
-import modules.sequence as sequence
+import helpers.prime as prime
+import helpers.sequence as sequence
 
 def euler ():
     # highest pandigital prime found so far

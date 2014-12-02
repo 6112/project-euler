@@ -13,7 +13,7 @@
 
 # How many hands does Player 1 win?
 
-from problems.helpers.poker import *
+from helpers.poker import *
 
 def euler():
   # number of games player 1 wins

@@ -6,7 +6,7 @@
 
 # Find the sum of all the primes below two million.
 
-import modules.prime as prime
+import helpers.prime as prime
 
 HIGHEST_VALUE = 2000000
 

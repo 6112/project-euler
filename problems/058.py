@@ -22,7 +22,7 @@
 # side length of the square spiral for which the ratio of primes along both
 # diagonals first falls below 10%?
 
-from modules.prime import is_prime
+from helpers.prime import is_prime
 
 def euler():
     side_length = 2

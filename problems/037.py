@@ -12,8 +12,8 @@
 
 # NOTE: 2, 3, 5, and 7 are not considered to be truncatable primes.
 
-from modules.prime import *
-from modules.sequence import *
+from helpers.prime import *
+from helpers.sequence import *
 
 def euler ():
     accumulator = 0

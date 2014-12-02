@@ -8,7 +8,7 @@
 # What is the smallest positive number that is evenly divisible by all of the
 # numbers from 1 to 20?
 
-import modules.prime as prime
+import helpers.prime as prime
 
 HIGHEST_DIVISOR = 20
 
