@@ -23,11 +23,16 @@ from helpers.totient import *
 
 def euler():
     MAX = 10 ** 6
+    # at the end, this table will contain all the values for totients
     table = list(range(MAX + 1))
     match_count = 0
+    # there are totient(p) reduced fracions for each denominator p
     for p in range(2, MAX + 1):
         if table[p] == p:
+            # this number is prime: multiply each of is multiples by (1 - 1 / p)
             for q in range(p, MAX + 1, p):
                 table[q] *= 1 - 1 /  p
+        # add totient(p) to the number of matches
         match_count += table[p]
+    # return the number of matches, as an integer
     return round(match_count)
