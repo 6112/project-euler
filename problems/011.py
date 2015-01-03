@@ -1,5 +1,5 @@
 # encoding=utf-8
-## SOLVED 20/12/13
+## SOLVED 2013/12/20
 ## 70600674
 
 # In the 20x20 grid below, four numbers along a diagonal line have been marked 

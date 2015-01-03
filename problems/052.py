@@ -1,5 +1,5 @@
 #encoding=utf-8
-## SOLVED 18/04/14
+## SOLVED 2014/04/18
 ## 142857
 
 # It can be seen that the number, 125874, and its double, 251748, contain

@@ -1,5 +1,5 @@
 # encoding=utf-8
-## SOLVED 23/12/13
+## SOLVED 2013/12/23
 ## 669171001
 
 # Starting with the number 1 and moving to the right in a clockwise direction a

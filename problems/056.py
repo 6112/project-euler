@@ -1,5 +1,5 @@
 # encoding=utf-8
-## SOLVED 20/10/13
+## SOLVED 2013/10/20
 ## 972
 
 # A googol (10100) is a massive number: one followed by one-hundred zeros;

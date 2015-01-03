@@ -1,5 +1,5 @@
 # encoding=utf-8
-## SOLVED 02/01/15
+## SOLVED 2015/01/02
 ## 190569291
 
 # It is possible to write five as a sum in exactly six different ways:

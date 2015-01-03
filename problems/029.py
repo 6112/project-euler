@@ -1,5 +1,5 @@
 # encoding=utf-8
-## SOLVED 24/12/13
+## SOLVED 2013/12/24
 ## 9183
 
 # Consider all integer combinations of ab for 2 ≤ a ≤ 5 and 2 ≤ b ≤ 5:

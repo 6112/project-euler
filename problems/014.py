@@ -1,5 +1,5 @@
 # encoding=utf-8
-## SOLVED 20/12/13
+## SOLVED 2013/12/20
 ## 837799
 
 # The following iterative sequence is defined for the set of positive integers:

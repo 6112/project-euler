@@ -1,5 +1,5 @@
 # encoding=utf-8
-## SOLVED 24/12/13
+## SOLVED 2013/12/24
 ## 100
 
 # The fraction 49/98 is a curious fraction, as an inexperienced mathematician in

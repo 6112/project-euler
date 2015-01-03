@@ -1,5 +1,5 @@
 # encoding=utf-8
-## SOLVED 23/12/13
+## SOLVED 2013/12/23
 ## 983
 
 # A unit fraction contains 1 in the numerator. The decimal representation of the

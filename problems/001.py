@@ -1,5 +1,5 @@
 # encoding=utf-8
-## SOLVED 19/12/13
+## SOLVED 2013/12/19
 ## 233168
 
 # If we list all the natural numbers below 10 that are multiples of 3 or 5, we 

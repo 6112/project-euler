@@ -1,5 +1,5 @@
 #encoding=utf-8
-## SOLVED 10/04/14
+## SOLVED 2014/04/10
 ## 5777
 
 # It was proposed by Christian Goldbach that every odd composite number can be

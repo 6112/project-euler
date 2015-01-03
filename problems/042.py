@@ -1,5 +1,5 @@
 #encoding=utf-8
-## SOLVED 10/04/14
+## SOLVED 2014/04/10
 ## 162
 
 # The nth term of the sequence of triangle numbers is given by, tn = ½n(n+1); so

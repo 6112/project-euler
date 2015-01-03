@@ -1,5 +1,5 @@
 # encoding=utf-8
-## SOLVED 23/12/13
+## SOLVED 2013/12/23
 ## 4782
 
 # The Fibonacci sequence is defined by the recurrence relation:

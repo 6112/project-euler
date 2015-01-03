@@ -1,5 +1,5 @@
 # encoding=utf-8
-## SOLVED 25/12/13
+## SOLVED 2013/12/25
 ## 748317
 
 # The number 3797 has an interesting property. Being prime itself, it is

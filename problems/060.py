@@ -1,5 +1,5 @@
 # encoding=utf-8
-## SOLVED 17/11/14
+## SOLVED 2014/11/17
 ## 26033
 
 # The primes 3, 7, 109, and 673, are quite remarkable. By taking any two primes

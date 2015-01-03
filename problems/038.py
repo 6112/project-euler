@@ -1,5 +1,5 @@
 # encoding=utf-8
-## SOLVED 25/12/13
+## SOLVED 2013/12/25
 ## 932718654
 
 # Take the number 192 and multiply it by each of 1, 2, and 3:

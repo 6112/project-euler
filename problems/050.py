@@ -1,5 +1,5 @@
 #encoding=utf-8
-## SOLVED 17/04/14
+## SOLVED 2014/04/17
 ## 997651
 
 # The prime 41, can be written as the sum of six consecutive primes:

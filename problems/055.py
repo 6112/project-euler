@@ -1,5 +1,5 @@
 #encoding=utf-8
-## SOLVED 07/05/14
+## SOLVED 2014/05/07
 ## 249
 
 # If we take 47, reverse and add, 47 + 74 = 121, which is palindromic.

@@ -1,5 +1,5 @@
 # encoding=utf-8
-## SOLVED 19/12/13
+## SOLVED 2013/12/19
 ## 40824
 
 # Find the greatest product of five consecutive digits in the 1000-digit number.

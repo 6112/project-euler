@@ -1,5 +1,5 @@
 # encoding=utf-8
-## SOLVED 25/12/13
+## SOLVED 2013/12/25
 ## 55
 
 # The number, 197, is called a circular prime because all rotations of the

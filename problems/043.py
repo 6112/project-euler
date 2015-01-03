@@ -1,5 +1,5 @@
 #encoding=utf-8
-## SOLVED 10/04/14
+## SOLVED 2014/04/10
 ## 16695334890
 
 # The number, 1406357289, is a 0 to 9 pandigital number because it is made up of

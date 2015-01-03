@@ -1,5 +1,5 @@
 # encoding=utf-8
-## SOLVED 21/12/13
+## SOLVED 2013/12/21
 ## 31626
 
 # Let d(n) be defined as the sum of proper divisors of n (numbers less than n

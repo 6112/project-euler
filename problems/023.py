@@ -1,5 +1,5 @@
 # encoding=utf-8
-## SOLVED 23/12/13
+## SOLVED 2013/12/23
 ## 4179871
 
 # A perfect number is a number for which the sum of its proper divisors is

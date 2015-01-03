@@ -1,5 +1,5 @@
 # encoding=utf-8
-## SOLVED 20/10/14
+## SOLVED 2014/10/20
 # 26241
 
 # Starting with 1 and spiralling anticlockwise in the following way, a square

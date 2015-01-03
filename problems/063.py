@@ -1,5 +1,5 @@
 # encoding=utf-8
-## SOLVED 18/11/14
+## SOLVED 2014/11/18
 ## 49
 
 # The 5-digit number, 16807=75, is also a fifth power. Similarly, the 9-digit

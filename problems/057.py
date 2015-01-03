@@ -1,5 +1,5 @@
 # encoding=utf-8
-## SOLVED 20/10/14
+## SOLVED 2014/10/20
 ## 153
 
 # It is possible to show that the square root of two can be expressed as an

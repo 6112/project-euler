@@ -1,5 +1,5 @@
 # encoding=utf-8
-## SOLVED 19/12/13
+## SOLVED 2013/12/19
 ## 31875000
 
 # A Pythagorean triplet is a set of three natural numbers, a < b < c, for which,

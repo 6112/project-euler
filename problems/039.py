@@ -1,5 +1,5 @@
 # encoding=utf-8
-## SOLVED 25/12/13
+## SOLVED 2013/12/25
 ## 840
 
 # If p is the perimeter of a right angle triangle with integral length sides,

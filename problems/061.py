@@ -1,5 +1,5 @@
 # encoding=utf-8
-## SOLVED 18/11/14
+## SOLVED 2014/11/18
 ## 28684
 
 # Triangle, square, pentagonal, hexagonal, heptagonal, and octagonal numbers

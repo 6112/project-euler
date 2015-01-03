@@ -1,5 +1,5 @@
 # encoding=utf-8
-## SOLVED 17/01/14
+## SOLVED 2014/01/17
 ## 210
 
 # An irrational decimal fraction is created by concatenating the positive 

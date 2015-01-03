@@ -1,5 +1,5 @@
 # encoding=utf-8
-## SOLVED 23/12/13
+## SOLVED 2013/12/23
 ## 2783915460
 
 # A permutation is an ordered arrangement of objects. For example, 3124 is one

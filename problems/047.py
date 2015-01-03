@@ -1,5 +1,5 @@
 #encoding=utf-8
-## SOLVED 10/04/14
+## SOLVED 2014/04/10
 ## 134043
 
 # The first two consecutive numbers to have two distinct prime factors are:

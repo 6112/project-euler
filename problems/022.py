@@ -1,5 +1,5 @@
 # encoding=utf-8
-## SOLVED 23/12/13
+## SOLVED 2013/12/23
 ## 871198282
 
 # Using names.txt (right click and 'Save Link/Target As...'), a 46K text file

@@ -1,5 +1,5 @@
 # encoding=utf-8
-## SOLVED 24/12/13
+## SOLVED 2013/12/24
 ## 40730
 
 # 145 is a curious number, as 1! + 4! + 5! = 1 + 24 + 120 = 145.

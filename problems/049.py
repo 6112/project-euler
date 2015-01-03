@@ -1,5 +1,5 @@
 #encoding=utf-8
-## SOLVED 12/04/14
+## SOLVED 2014/04/12
 ## 296962999629
 
 # The arithmetic sequence, 1487, 4817, 8147, in which each of the terms

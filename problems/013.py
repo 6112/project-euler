@@ -1,5 +1,5 @@
 # encoding=utf-8
-## SOLVED 20/12/13
+## SOLVED 2013/12/20
 ## 5537376230
 
 # Work out the first ten digits of the sum of the following one-hundred 50-digit

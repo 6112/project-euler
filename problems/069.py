@@ -1,5 +1,5 @@
 # encoding=utf-8
-## SOLVED 30/11/14
+## SOLVED 2014/11/30
 ## 510510
 
 # Euler's Totient function, φ(n) [sometimes called the phi function], is used

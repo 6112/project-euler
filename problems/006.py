@@ -1,5 +1,5 @@
 # encoding=utf-8
-## SOLVED 19/12/13
+## SOLVED 2013/12/19
 ## 25164150
 
 # The sum of the squares of the first ten natural numbers is, 
