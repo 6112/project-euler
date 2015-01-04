@@ -18,19 +18,24 @@ from helpers.prime import *
 
 MAX = 100
 
-solutions = [[]]
-
 def euler():
   n = 10
   while chain(n, n) < 5000:
     n += 1
   return n
 
+# returns the number of possible ways to write `n` as a sum of primes, where
+# each prime is less than or equal to `l`
 def chain(n, l):
+  # 0 means the previous number was a prime
   if n == 0:
     return 1
+  # 1 or a negative value, no way to write it as a prime
   if n < 2:
     return 0
+  # otherwise, chain through each possibility: for each prime q, see how many
+  # ways there are to write `n-q` as a sum of primes, where all the other
+  # primes are less than or equal to `q`
   acc = 0
   for q in primes(l):
     acc += chain(n - q, q)
