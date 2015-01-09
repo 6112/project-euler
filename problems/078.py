@@ -1,5 +1,5 @@
 # encoding=utf-8
-## SOLVED 2014/01/03
+## SOLVED 2015/01/03
 ## 55374
 
 # Let p(n) represent the number of different ways in which n coins can be

@@ -1,5 +1,5 @@
 # encoding=utf-8
-## SOLVED 2014/01/04
+## SOLVED 2015/01/04
 ## 260324
 
 # NOTE: This problem is a more challenging version of Problem 81.

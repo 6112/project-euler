@@ -1,5 +1,5 @@
 # encoding=utf-8
-## SOLVED 2014/01/03
+## SOLVED 2015/01/03
 ## 71
 
 # It is possible to write ten as the sum of primes in exactly five different

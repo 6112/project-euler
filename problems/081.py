@@ -1,5 +1,5 @@
 # encoding=utf-8
-## SOLVED 2014/01/04
+## SOLVED 2015/01/04
 ## 427337
 
 # In the 5 by 5 matrix below, the minimal path sum from the top left to the

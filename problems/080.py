@@ -1,5 +1,5 @@
 # encoding=utf-8
-## SOLVED 2014/01/04
+## SOLVED 2015/01/04
 ## 40886
 
 # It is well known that if the square root of a natural number is not an
