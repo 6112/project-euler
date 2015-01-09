@@ -118,7 +118,9 @@ problem_descriptions = {
         80: "square root digital expansion",
         81: "path sum: two ways",
         82: "path sum: three ways",
-        83: "path sum: four ways"
+        83: "path sum: four ways",
+        84: "monopoly odds",
+        85: "counting rectangles"
 }
 
 if __name__ == '__main__':
