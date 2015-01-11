@@ -94,7 +94,7 @@ problem_descriptions = {
         56: "powerful digit sum",
         57: "square root convergents",
         58: "spiral primes",
-        59: "xOR decryption",
+        59: "XOR decryption",
         60: "prime pair sets",
         61: "cyclical figurate numbers",
         62: "cubic permutations",
@@ -120,7 +120,9 @@ problem_descriptions = {
         82: "path sum: three ways",
         83: "path sum: four ways",
         84: "monopoly odds",
-        85: "counting rectangles"
+        85: "counting rectangles",
+        86: "cuboid route",
+        87: "prime power triples"
 }
 
 if __name__ == '__main__':

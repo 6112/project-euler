@@ -21,17 +21,17 @@
 # In the first one-thousand expansions, how many fractions contain a numerator
 # with more digits than denominator?
 
-from fractions import Fraction
-from math import log
+import fractions
+import math
 
 def euler():
-    acc = Fraction(2)
+    acc = fractions.Fraction(2)
     count = 0
     for i in range(1000):
-        acc = Fraction(2) + 1 / acc
-        x = Fraction(1) + 1 / acc
-        numerator_digit_count = int(log(x.numerator, 10)) + 1
-        denominator_digit_count = int(log(x.denominator, 10)) + 1
+        acc = fractions.Fraction(2) + 1 / acc
+        x = fractions.Fraction(1) + 1 / acc
+        numerator_digit_count = int(math.log(x.numerator, 10)) + 1
+        denominator_digit_count = int(math.log(x.denominator, 10)) + 1
         if numerator_digit_count > denominator_digit_count:
             count += 1
     return count

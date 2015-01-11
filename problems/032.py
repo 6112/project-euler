@@ -15,12 +15,12 @@
 # HINT: Some products can be obtained in more than one way so be sure to only
 # include it once in your sum.
 
-from helpers.sequence import *
+import helpers.sequence as sequence
 
 def euler ():
     products_cache = {}
     accumulator = 0
-    for permutation in permutations ('123456789'):
+    for permutation in sequence.permutations ('123456789'):
         permutation = ''.join (permutation)
         products = valid_products (permutation)
         for product in products:

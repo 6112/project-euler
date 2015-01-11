@@ -10,16 +10,14 @@
 
 # How many circular primes are there below one million?
 
-from helpers.prime import *
-from helpers.sequence import *
+import helpers.prime as primeutils
+import helpers.sequence as sequence
 
-import bisect
-
-HIGHEST_VALUE = 1000000
+MAX = 1000000
 
 def euler ():
     accumulator = 0
-    for prime in primes (HIGHEST_VALUE):
+    for prime in primeutils.primes (MAX):
         if is_circular (prime):
             accumulator += 1
     return accumulator
@@ -28,9 +26,9 @@ circular_cache = {}
 def is_circular (prime):
     if prime in circular_cache:
         return circular_cache [prime]
-    for rotation in rotations (str (prime)):
-        if not is_prime (int (''.join (rotation))):
+    for rotation in sequence.rotations (str (prime)):
+        if not primeutils.is_prime (int (''.join (rotation))):
             return False
-    for rotation in rotations (str (prime)):
+    for rotation in sequence.rotations (str (prime)):
         circular_cache [int (''.join (rotation))] = True
     return True

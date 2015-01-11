@@ -12,14 +12,14 @@
 
 # NOTE: 2, 3, 5, and 7 are not considered to be truncatable primes.
 
-from helpers.prime import *
-from helpers.sequence import *
+import helpers.prime as primeutils
+import helpers.sequence as sequence
 
 def euler ():
     accumulator = 0
     primes_found = 0
     cache = {}
-    for prime in all_primes ():
+    for prime in primeutils.all_primes ():
         if prime not in cache and is_truncatable (prime):
             primes_found += 1
             accumulator += prime
@@ -31,10 +31,10 @@ def euler ():
 def is_truncatable (number):
     if number < 10:
         return False
-    for truncation in left_truncations (str (number)):
-        if not is_prime (int (truncation)):
+    for truncation in sequence.left_truncations (str (number)):
+        if not primeutils.is_prime (int (truncation)):
             return False
-    for truncation in right_truncations (str (number)):
-        if not is_prime (int (truncation)):
+    for truncation in sequence.right_truncations (str (number)):
+        if not primeutils.is_prime (int (truncation)):
             return False
     return True 

@@ -16,14 +16,14 @@
 
 import math
 
-HIGHEST_PENTAGON_INDEX = 2500
+MAX = 2500
 
 def euler():
     # for each pentagon
-    for i in range(1, HIGHEST_PENTAGON_INDEX):
+    for i in range(1, MAX):
         first_pentagon = p(i)
         # for each pentagon above this one
-        for j in range(i, HIGHEST_PENTAGON_INDEX):
+        for j in range(i, MAX):
             second_pentagon = p(j)
             pentagon_sum = first_pentagon + second_pentagon
             pentagon_difference = second_pentagon - first_pentagon

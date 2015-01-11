@@ -21,7 +21,7 @@
 # Find the value of d < 1000 for which 1/d contains the longest recurring cycle
 # in its decimal fraction part.
 
-HIGHEST_DIVISOR = 1000
+MAX = 1000
 
 def euler ():
     # longest length for a cycle
@@ -29,7 +29,7 @@ def euler ():
     # divisor that generates that cycle length
     longest_cycle_divisor = 0
     # for each divisor
-    for divisor in range (2, HIGHEST_DIVISOR):
+    for divisor in range (2, MAX):
         # calculate the length of the fraction's cycle
         cycle_length = fraction_cycle_length (divisor)
         # if it's higher than any value seen before
@@ -38,7 +38,7 @@ def euler ():
             longest_cycle_length = cycle_length
             longest_cycle_divisor = divisor
     # return the divisor that generates the longest cycle
-    return (longest_cycle_length, longest_cycle_divisor)
+    return longest_cycle_divisor
 
 def fraction_cycle_length (denominator):
     """Return the number of digits in the cycle part of a fraction.

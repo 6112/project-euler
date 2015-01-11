@@ -16,13 +16,13 @@
 
 import helpers.prime as prime
 
-HIGHEST_VALUE = 10000
+MAX = 10000
 
 def euler ():
     # accumulator for the sum
     accumulator = 0
     # for each value of a in the given range
-    for a in range (1, HIGHEST_VALUE):
+    for a in range (1, MAX):
         # calculate the b
         b = d (a)
         # if a and b are amicable
@@ -41,4 +41,4 @@ def d (number):
     d (4) = 1 + 2 = 3
     d (6) = 1 + 2 + 3 = 6
     """
-    return sum (divisors (number)) - number
+    return sum (prime.divisors (number)) - number

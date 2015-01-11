@@ -10,7 +10,7 @@
 # By considering the terms in the Fibonacci sequence whose values do not exceed
 # four million, find the sum of the even-valued terms.
 
-HIGHEST_VALUE = 4000000
+MAX = 4000000
 
 def euler ():
     # previous and current fibonacci sequence numbers
@@ -18,8 +18,8 @@ def euler ():
     current_number = 1
     # sum accumulator
     accumulator = 0
-    # for each fibonacci number until HIGHEST_VALUE
-    while current_number < HIGHEST_VALUE:
+    # for each fibonacci number until MAX
+    while current_number < MAX:
         # add to the sum if it's an even number
         if current_number % 2 == 0:
             accumulator += current_number

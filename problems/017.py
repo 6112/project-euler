@@ -15,13 +15,13 @@
 
 import re
 
-HIGHEST_NUMBER = 1000
+MAX = 1000
 
 def euler ():
     # accumulator for the number of letters used
     accumulator = 0
     # for each number in the given range
-    for number in range (1, HIGHEST_NUMBER + 1):
+    for number in range (1, MAX + 1):
         # get the number's name
         name = number_name (number)
         # remove the whitespace and dashes

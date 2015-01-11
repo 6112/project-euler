@@ -8,8 +8,8 @@
 
 import helpers.prime as prime
 
-HIGHEST_VALUE = 2000000
+MAX = 2000000
 
 def euler ():
     # calculate and return the sum of the primes
-    return sum (prime.primes (HIGHEST_VALUE))
+    return sum (prime.primes (MAX))

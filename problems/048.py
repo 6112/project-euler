@@ -6,12 +6,13 @@
 
 # Find the last ten digits of the series, 11 + 22 + 33 + ... + 10001000.
 
+MAX = 1000
 
 def euler():
     # accumulator for the sum
     accumulator = 0
     # for each number from 1 to 1000
-    for n in range(1, 1001):
+    for n in range(1, MAX + 1):
         # add the exponent to the accumulator
         accumulator += quick_exponent_with_mod(n, n, 10 ** 10)
         accumulator %= 10 ** 10
