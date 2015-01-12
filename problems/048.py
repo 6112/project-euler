@@ -1,17 +1,18 @@
 #encoding=utf-8
-## SOLVED 10/04/14
+## SOLVED 2014/04/10
 ## 9110846700
 
 # The series, 11 + 22 + 33 + ... + 1010 = 10405071317.
 
 # Find the last ten digits of the series, 11 + 22 + 33 + ... + 10001000.
 
+MAX = 1000
 
 def euler():
     # accumulator for the sum
     accumulator = 0
     # for each number from 1 to 1000
-    for n in range(1, 1001):
+    for n in range(1, MAX + 1):
         # add the exponent to the accumulator
         accumulator += quick_exponent_with_mod(n, n, 10 ** 10)
         accumulator %= 10 ** 10

@@ -1,5 +1,5 @@
 # encoding=utf-8
-## SOLVED 20/12/13
+## SOLVED 2013/12/20
 ## 837799
 
 # The following iterative sequence is defined for the set of positive integers:
@@ -21,11 +21,11 @@
 
 import helpers.prime as prime
 
-HIGHEST_NUMBER = 1000000
+MAX = 1000000
 
 def euler ():
     # return the number that generates the longest collatz sequence
-    return max ((collatz (n), n) for n in range (1, HIGHEST_NUMBER)) [1]
+    return max ((collatz (n), n) for n in range (1, MAX)) [1]
 
 # use a dictionary to optimize the collatz sequence
 collatz_cache = {1: 1}

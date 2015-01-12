@@ -1,5 +1,5 @@
 # encoding=utf-8
-## SOLVED 23/12/13
+## SOLVED 2013/12/23
 ## 4179871
 
 # A perfect number is a number for which the sum of its proper divisors is
@@ -20,15 +20,15 @@
 # Find the sum of all the positive integers which cannot be written as the sum
 # of two abundant numbers.
 
-MAX_VALUE = 28123
+MAX = 28123
 
 def euler ():
     abundants = {}
-    for number in range (1, MAX_VALUE):
+    for number in range (1, MAX):
         if is_abundant (number):
             abundants [number] = True
     accumulator = 0
-    for number in range (1, MAX_VALUE):
+    for number in range (1, MAX):
         is_a_sum = False
         for abundant in abundants:
             if (number - abundant) in abundants:

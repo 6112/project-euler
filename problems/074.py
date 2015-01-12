@@ -1,5 +1,5 @@
 # encoding=utf-8
-## SOLVED 7/12/14
+## SOLVED 2014/12/07
 ## 402
 
 # The number 145 is well known for the property that the sum of the factorial

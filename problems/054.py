@@ -1,5 +1,5 @@
 #encoding=utf-8
-## SOLVED 07/05/14
+## SOLVED 2014/05/07
 ## 376
 
 # [...]
@@ -13,7 +13,7 @@
 
 # How many hands does Player 1 win?
 
-from helpers.poker import *
+import helpers.poker as poker
 
 def euler():
   # number of games player 1 wins
@@ -24,9 +24,9 @@ def euler():
       # remove whitespace at the end
       line_string = line_string.rstrip()
       # make two PokerHand objects (wrappers for lists of PokerCard objects)
-      hand1, hand2 = read_poker_line(line_string)
+      hand1, hand2 = poker.read_poker_line(line_string)
       # if player 1 wins this game
-      if is_winner_player_1(hand1, hand2):
+      if poker.is_winner_player_1(hand1, hand2):
         win_count += 1
   # return the number of games won by player 1
   return win_count

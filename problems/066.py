@@ -1,5 +1,5 @@
 # encoding=utf-8
-## SOLVED 29/11/14
+## SOLVED 2014/11/29
 ## 661
 
 # Consider quadratic Diophantine equations of the form:

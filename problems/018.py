@@ -1,5 +1,5 @@
 # encoding=utf-8
-## SOLVED 21/12/13
+## SOLVED 2013/12/21
 ## 1074
 
 # By starting at the top of the triangle below and moving to adjacent numbers on

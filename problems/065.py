@@ -1,5 +1,5 @@
 # encoding=utf-8
-## SOLVED 25/11/14
+## SOLVED 2014/11/25
 ## 272
 
 # The square root of 2 can be written as an infinite continued fraction.

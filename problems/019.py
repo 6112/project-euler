@@ -1,5 +1,5 @@
 # encoding=utf-8
-## SOLVED 20/12/13
+## SOLVED 2013/12/20
 ## 171
 
 # How many Sundays fell on the first of the month during the twentieth century

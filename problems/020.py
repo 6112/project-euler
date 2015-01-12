@@ -1,5 +1,5 @@
 # encoding=utf-8
-## SOLVED 21/12/13
+## SOLVED 2013/12/21
 ## 648
 
 # n! means n x (n - 1) x ... x 3 x 2 x 1

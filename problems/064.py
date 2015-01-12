@@ -1,5 +1,5 @@
 # encoding=utf-8
-## SOLVED 25/11/14
+## SOLVED 2014/11/25
 ## 1322
 
 # All square roots are periodic when written as continued fractions.

@@ -1,5 +1,5 @@
 # encoding=utf-8
-## SOLVED 01/12/14
+## SOLVED 2014/12/01
 ## 303963552391
 
 # Consider the fraction, n/d, where n and d are positive integers. If n<d and

@@ -1,5 +1,5 @@
 # encoding=utf-8
-## SOLVED 19/12/13
+## SOLVED 2013/12/19
 ## 25164150
 
 # The sum of the squares of the first ten natural numbers is, 
@@ -14,13 +14,13 @@
 # Find the difference between the sum of the squares of the first one hundred
 # natural numbers and the square of the sum.
 
-HIGHEST_NUMBER = 100
+MAX = 100
 
 def euler ():
     # list of numbers to use
-    numbers = range (1, HIGHEST_NUMBER + 1)
+    numbers = range (1, MAX + 1)
     # sum of the squares of each number
-    sum_of_squares = sum ([x * x for x in numbers])
+    sum_of_squares = sum (x * x for x in numbers)
     # square of the sum of those numbers
     square_of_sum = sum (numbers) ** 2
     # return the difference of the two

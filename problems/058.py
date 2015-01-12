@@ -1,5 +1,5 @@
 # encoding=utf-8
-## SOLVED 20/10/14
+## SOLVED 2014/10/20
 # 26241
 
 # Starting with 1 and spiralling anticlockwise in the following way, a square
@@ -22,18 +22,18 @@
 # side length of the square spiral for which the ratio of primes along both
 # diagonals first falls below 10%?
 
-from helpers.prime import is_prime
+import helpers.prime as prime
 
 def euler():
     side_length = 2
     accumulator = 1
     prime_count = 0
     number_count = 1
-    while side_length == 2 or prime_count / number_count >= 0.1:
+    while side_length <= 8 or float(prime_count) / number_count >= 0.1:
         for i in range(4):
             accumulator += side_length
             number_count += 1
-            if is_prime(accumulator):
+            if prime.is_prime(accumulator):
                 prime_count += 1
         side_length += 2
     return (side_length - 1)

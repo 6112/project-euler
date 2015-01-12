@@ -1,5 +1,5 @@
 # encoding=utf-8
-## SOLVED 19/01/14
+## SOLVED 2014/01/19
 ## 7652413
 
 # We shall say that an n-digit number is pandigital if it makes use of all the

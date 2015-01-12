@@ -1,5 +1,5 @@
 # encoding=utf-8
-## SOLVED 18/11/14
+## SOLVED 2014/11/18
 ## 127035954683
 
 # The cube, 41063625 (3453), can be permuted to produce two other cubes:

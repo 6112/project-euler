@@ -1,5 +1,5 @@
 # encoding=utf-8
-## SOLVED 25/12/13
+## SOLVED 2013/12/25
 ## 872187
 
 # The decimal number, 585 = 10010010012 (binary), is palindromic in both bases.

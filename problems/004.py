@@ -1,5 +1,5 @@
 # encoding=utf-8
-## SOLVED 19/12/13
+## SOLVED 2013/12/19
 ## 906609
 
 # A palindromic number reads the same both ways. The largest palindrome made

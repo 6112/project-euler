@@ -1,5 +1,5 @@
 #encoding=utf-8
-## SOLVED 10/04/14
+## SOLVED 2014/04/10
 ## 162
 
 # The nth term of the sequence of triangle numbers is given by, tn = ½n(n+1); so
@@ -19,7 +19,7 @@
 import helpers.file as fileutils
 
 # arbitrary value for the highest reachable triangle number
-HIGHEST_TRIANGLE = 1000
+MAX = 1000
 
 def euler():
     # set of the triangle numbers until an arbitrary maximum number
@@ -27,7 +27,7 @@ def euler():
     # generate triangle numbers
     n = 1
     highest_triangle = 0
-    while highest_triangle < HIGHEST_TRIANGLE:
+    while highest_triangle < MAX:
         highest_triangle = n * (n + 1) // 2
         triangles.add(highest_triangle)
         n += 1

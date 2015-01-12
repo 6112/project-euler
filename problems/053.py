@@ -1,5 +1,5 @@
 #encoding=utf-8
-## SOLVED 18/04/14
+## SOLVED 2014/04/18
 ## 4075
 
 # There are exactly ten ways of selecting three from five, 12345:

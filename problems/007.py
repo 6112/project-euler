@@ -1,5 +1,5 @@
 # encoding=utf-8
-## SOLVED 19/12/13
+## SOLVED 2013/12/19
 ## 104743
 
 # By listing the first six prime numbers: 2, 3, 5, 7, 11, and 13, we can see

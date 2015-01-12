@@ -1,5 +1,5 @@
 # encoding=utf-8
-## SOLVED 20/12/13
+## SOLVED 2013/12/20
 ## 137846528820
 
 # Starting in the top left corner of a 2x2 grid, and only being able to move to

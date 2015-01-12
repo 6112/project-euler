@@ -1,5 +1,5 @@
 # encoding=utf-8
-## SOLVED 19/12/13
+## SOLVED 2013/12/19
 ## 232792560
 
 # 2520 is the smallest number that can be divided by each of the numbers from 1

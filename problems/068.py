@@ -1,5 +1,5 @@
 # encoding=utf-8
-## SOLVED 30/11/14
+## SOLVED 2014/11/30
 ## 6531031914842725
 
 # Consider the following "magic" 3-gon ring, filled with the numbers 1 to 6,

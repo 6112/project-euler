@@ -1,5 +1,5 @@
 #encoding=utf-8
-## SOLVED 18/04/14
+## SOLVED 2014/04/18
 ## 121313
 
 # By replacing the 1st digit of the 2-digit number *3, it turns out that six of
