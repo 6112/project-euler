@@ -1,28 +1,28 @@
 #!/usr/bin/python
 
-from sys import argv
-from importlib import import_module
+import sys
+import importlib
 
 import timeit
 
-def main ():
-    if len (argv) <= 1:
-        print ('Must supply a problem number.')
+def main():
+    if len(sys.argv) <= 1:
+        print_help()
         return
     try:
-        problem = int (argv [1])
+        problem = int(sys.argv [1])
     except ValueError:
-        print (argv [1] + ' is not a valid integer.')
+        print(sys.argv [1] + ' is not a valid integer.')
         return
-    if int (argv [1]) <= 0:
-        print (argv [1] + ' is not greater than or equal to one.')
+    if int(sys.argv [1]) <= 0:
+        print(sys.argv [1] + ' is not greater than or equal to one.')
     try:
-        module = import_module ('problems.%03d' % problem)
+        module = importlib.import_module('problems.{:03d}'.format(problem))
     except ImportError as error:
-        print ('No solution for problem #' + argv [1] + '.')
+        print('No solution for problem #' + sys.argv [1] + '.')
         return
     if not module.euler:
-        print ('Solution for problem #' + argv [1] + ' is invalid.')
+        print('Solution for problem #' + sys.argv [1] + ' is invalid.')
         return
     title = "(problem title missing)"
     if problem in problem_descriptions:
@@ -30,11 +30,18 @@ def main ():
     print('Solving problem #{0}: {1}.'.format(problem, title))
     print('Calculating (this may take some time)...')
     before = timeit.default_timer()
-    result = module.euler ()
+    result = module.euler()
     after = timeit.default_timer()
     print('The answer for problem #{0} is {1}.'.format(problem, result))
     print('Calculation took {0:.3f} seconds.'.format(after - before))
 
+def print_help():
+    """Prints a message to show what arguments this program takes."""
+    print("Usage: {} PROBLEM".format(sys.argv[0]))
+    print("Solves the given problem from projecteuler.net,",
+          "supplied by problem number.")
+
+# TODO: move these to their own problems' files
 problem_descriptions = {
         1 : "multiples of 3 and 5",
         2 : "even Fibonacci numbers",
@@ -126,4 +133,4 @@ problem_descriptions = {
 }
 
 if __name__ == '__main__':
-    main ()
+    main()
