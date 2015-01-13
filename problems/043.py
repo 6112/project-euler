@@ -66,7 +66,7 @@ def generate_valid_pandigitals():
                     # yield the whole pandigital 'list' to the main function
                     yield [first_digit, second_digit, third_digit] + pandigital
 
-def pandigitals_helper (pair, divisors, available):
+def pandigitals_helper(pair, divisors, available):
     """Used as a helper for generate_valid_pandigitals(), do not use directly.
 
     Selects the next possible digit that validates the next division and

@@ -12,7 +12,7 @@
 
 MAX = 4000000
 
-def euler ():
+def euler():
     # previous and current fibonacci sequence numbers
     previous_number = 0
     current_number = 1

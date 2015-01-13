@@ -16,14 +16,14 @@
 
 import helpers.file as fileutils
 
-def euler ():
+def euler():
     # read the pyramid from the file
-    pyramid = fileutils.list_from_file ('data/018.txt')
+    pyramid = fileutils.list_from_file('data/018.txt')
     # for each row, starting at the second from the bottom and going up
-    for y in range (len (pyramid) - 2, -1, -1):
+    for y in range(len(pyramid) - 2, -1, -1):
         # for each element of that row
-        for x in range (y + 1):
+        for x in range(y + 1):
             # add to it the highest of the two directly below it
-            pyramid [y][x] += max (pyramid [y + 1][x], pyramid [y + 1][x + 1])
+            pyramid [y][x] += max(pyramid [y + 1][x], pyramid [y + 1][x + 1])
     # return the value at the top of the pyramid
     return pyramid [0][0]

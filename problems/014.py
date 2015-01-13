@@ -23,22 +23,22 @@ import helpers.prime as prime
 
 MAX = 1000000
 
-def euler ():
+def euler():
     # return the number that generates the longest collatz sequence
-    return max ((collatz (n), n) for n in range (1, MAX)) [1]
+    return max((collatz(n), n) for n in range(1, MAX)) [1]
 
 # use a dictionary to optimize the collatz sequence
 collatz_cache = {1: 1}
-def collatz (number):
+def collatz(number):
     """Return the length of the collatz sequence starting at a given number."""
     # use cache if possible
     if number in collatz_cache:
         return collatz_cache [number]
     # compute the result using recursion
     if number % 2 == 0:
-        result = 1 + collatz (number // 2)
+        result = 1 + collatz(number // 2)
     else:
-        result = 1 + collatz (number * 3 + 1)
+        result = 1 + collatz(number * 3 + 1)
     # set it in the cache
     collatz_cache [number] = result
     # return the result

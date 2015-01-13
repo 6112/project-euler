@@ -22,13 +22,13 @@
 
 MAX = 28123
 
-def euler ():
+def euler():
     abundants = {}
-    for number in range (1, MAX):
-        if is_abundant (number):
+    for number in range(1, MAX):
+        if is_abundant(number):
             abundants [number] = True
     accumulator = 0
-    for number in range (1, MAX):
+    for number in range(1, MAX):
         is_a_sum = False
         for abundant in abundants:
             if (number - abundant) in abundants:
@@ -38,15 +38,15 @@ def euler ():
             accumulator += number
     return accumulator
 
-def list_of_abundants (highest_value):
+def list_of_abundants(highest_value):
     """Return the list of abundant numbers from 1 to the given number."""
     abundant_list = []
-    for number in range (1, highest_value):
-        if is_abundant (number):
-            abundant_list.append (number)
+    for number in range(1, highest_value):
+        if is_abundant(number):
+            abundant_list.append(number)
     return abundant_list
 
-def sum_of_divisors (number):
+def sum_of_divisors(number):
     """Return the sum of the divisors of a given number."""
     product = 1
     divisor = 2
@@ -61,9 +61,9 @@ def sum_of_divisors (number):
         product *= 1 + number
     return product
 
-def is_abundant (number):
+def is_abundant(number):
     """Return True iff the given number is abundant.
 
     A number is abundant iff the sum of its divisors is higher than itself.
     """
-    return sum_of_divisors (number) > number + number
+    return sum_of_divisors(number) > number + number

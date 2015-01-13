@@ -12,15 +12,15 @@ import helpers.prime as prime
 
 HIGHEST_DIVISOR = 20
 
-def euler ():
+def euler():
     # dictionary containing the highest power of each prime factor
     zipped_factors = {}
     # for each number in the desired range
-    for number in range (2, HIGHEST_DIVISOR + 1):
+    for number in range(2, HIGHEST_DIVISOR + 1):
         # calculate its prime factors
-        factors = prime.dictionary_prime_factors (number)
+        factors = prime.dictionary_prime_factors(number)
         # for each of those factors, and its power
-        for factor, power in factors.items ():
+        for factor, power in factors.items():
             # if that factor's power is higher than the one we had before
             if (not factor in zipped_factors
                 or zipped_factors [factor] < power):
@@ -28,7 +28,7 @@ def euler ():
                 zipped_factors [factor] = power
     # calculate the product of the prime factors elevated to the given powers
     accumulator = 1
-    for factor, power in zipped_factors.items ():
+    for factor, power in zipped_factors.items():
         accumulator *= factor ** power
     # return that product
     return accumulator

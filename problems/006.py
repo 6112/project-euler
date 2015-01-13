@@ -16,12 +16,12 @@
 
 MAX = 100
 
-def euler ():
+def euler():
     # list of numbers to use
-    numbers = range (1, MAX + 1)
+    numbers = range(1, MAX + 1)
     # sum of the squares of each number
-    sum_of_squares = sum (x * x for x in numbers)
+    sum_of_squares = sum(x * x for x in numbers)
     # square of the sum of those numbers
-    square_of_sum = sum (numbers) ** 2
+    square_of_sum = sum(numbers) ** 2
     # return the difference of the two
     return square_of_sum - sum_of_squares

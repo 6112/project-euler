@@ -18,14 +18,14 @@
 
 POWER = 5
 
-def euler ():
+def euler():
     accumulator = 0
-    for number in range (2, POWER * 9 ** POWER + 1):
-        if is_sum_of_power_digits (number, POWER):
+    for number in range(2, POWER * 9 ** POWER + 1):
+        if is_sum_of_power_digits(number, POWER):
             accumulator += number
     return accumulator
 
-def is_sum_of_power_digits (number, power):
+def is_sum_of_power_digits(number, power):
     starting_number = number
     accumulator = 0
     while number > 0:

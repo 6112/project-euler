@@ -10,6 +10,6 @@ import helpers.prime as prime
 
 MAX = 2000000
 
-def euler ():
+def euler():
     # calculate and return the sum of the primes
-    return sum (prime.primes (MAX))
+    return sum(prime.primes(MAX))

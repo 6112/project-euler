@@ -14,7 +14,7 @@ import math
 
 DIGITS = 1000
 
-def euler ():
+def euler():
     # used to calculate fibonacci numbers
     previous_number = 0
     current_number = 1
@@ -23,7 +23,7 @@ def euler ():
     while True:
         index += 1
         # return the index if the current number has 1000 digits at least
-        if math.log (current_number, 10) >= DIGITS - 1:
+        if math.log(current_number, 10) >= DIGITS - 1:
             return index
         # generate the next fibonacci number
         previous_number += current_number

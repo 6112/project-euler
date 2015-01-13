@@ -7,8 +7,8 @@
 
 import helpers.file as fileutils
 
-def euler ():
+def euler():
     # read the file
-    numbers = fileutils.flattened_list_from_file ('data/013.txt')
+    numbers = fileutils.flattened_list_from_file('data/013.txt')
     # return the first ten digits of the sum of the numbers
-    return str (sum (numbers)) [:10]
+    return str(sum(numbers)) [:10]

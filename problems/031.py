@@ -17,16 +17,16 @@ COINS = [200, 100, 50, 20, 10, 5, 2, 1]
 
 AMOUNT = 200
 
-def euler ():
-    return coin_combination_count (AMOUNT, COINS)
+def euler():
+    return coin_combination_count(AMOUNT, COINS)
 
-def coin_combination_count (amount, coins):
+def coin_combination_count(amount, coins):
     if amount == 0:
         return 1
     combination_count = 0
-    for coin_index, coin in enumerate (coins):
-        for coin_count in range (1, amount // coin + 1):
+    for coin_index, coin in enumerate(coins):
+        for coin_count in range(1, amount // coin + 1):
             new_amount = amount - coin_count * coin
             new_coins = coins [coin_index + 1:]
-            combination_count += coin_combination_count (new_amount, new_coins)
+            combination_count += coin_combination_count(new_amount, new_coins)
     return combination_count

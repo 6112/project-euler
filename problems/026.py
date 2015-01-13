@@ -23,15 +23,15 @@
 
 MAX = 1000
 
-def euler ():
+def euler():
     # longest length for a cycle
     longest_cycle_length = 0
     # divisor that generates that cycle length
     longest_cycle_divisor = 0
     # for each divisor
-    for divisor in range (2, MAX):
+    for divisor in range(2, MAX):
         # calculate the length of the fraction's cycle
-        cycle_length = fraction_cycle_length (divisor)
+        cycle_length = fraction_cycle_length(divisor)
         # if it's higher than any value seen before
         if cycle_length > longest_cycle_length:
             # keep in memory the cycle length, and which divisor generates it
@@ -40,7 +40,7 @@ def euler ():
     # return the divisor that generates the longest cycle
     return longest_cycle_divisor
 
-def fraction_cycle_length (denominator):
+def fraction_cycle_length(denominator):
     """Return the number of digits in the cycle part of a fraction.
 
     For instance, in 1/3 (0.3333...), '3' is the recurring cycle. The length of
@@ -63,11 +63,11 @@ def fraction_cycle_length (denominator):
             digit = accumulator // denominator
             # if we have never had that accumulator before
             if not accumulator in accumulators:
-                accumulators.append (accumulator)
+                accumulators.append(accumulator)
             else:
                 # if we have already met that accumulator before, return the
                 # number of digits between two occurences
-                return digit_count - accumulators.index (accumulator)
+                return digit_count - accumulators.index(accumulator)
             # subtract the result of the division from the accumulator
             accumulator -= digit * denominator
             # add a digit to the digit count

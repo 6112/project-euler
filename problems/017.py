@@ -17,17 +17,17 @@ import re
 
 MAX = 1000
 
-def euler ():
+def euler():
     # accumulator for the number of letters used
     accumulator = 0
     # for each number in the given range
-    for number in range (1, MAX + 1):
+    for number in range(1, MAX + 1):
         # get the number's name
-        name = number_name (number)
+        name = number_name(number)
         # remove the whitespace and dashes
-        name = re.sub ('\\s|-', '', name)
+        name = re.sub('\\s|-', '', name)
         # add the length of the anme to the number of letters used
-        accumulator += len (name)
+        accumulator += len(name)
     # return the number of letters used
     return accumulator
 
@@ -57,7 +57,7 @@ number_name_dictionary = {
     1000: 'one thousand'
 }
 
-def number_name (number):
+def number_name(number):
     """Return the full name, in letters, of a given number.
 
     Args:
@@ -68,10 +68,10 @@ def number_name (number):
     Raises:
         ValueError: if number is not between 0 and 1000.
     """
-    if not isinstance (number, int):
-        raise TypeError ("number is not an integer")
+    if not isinstance(number, int):
+        raise TypeError("number is not an integer")
     elif number < 0 or number > 1000:
-        raise ValueError ("number out of range (must be between 0 and 1000)")
+        raise ValueError("number out of range (must be between 0 and 1000)")
     elif number in number_name_dictionary:
         # return directly if it's simply a dictionary lookup -- used for
         # exceptions and small numbers
@@ -86,17 +86,17 @@ def number_name (number):
             name = number_name_dictionary [number // 10 * 10]
         else: 
             # regular tens: sixty, seventy...
-            name = number_name (number // 10) + 'ty'
+            name = number_name(number // 10) + 'ty'
         if number % 10:
             # if has a non-zero unit, add a dash, then the name of the units
             # (twenty-three, ninety-eight...)
-            name += '-' + number_name (number % 10)
+            name += '-' + number_name(number % 10)
         return name
     elif number >= 100 and number < 1000:
         # nine hundred, two hundred...
-        name = number_name (number // 100) + ' hundred'
+        name = number_name(number // 100) + ' hundred'
         # if has tens or units
         if number % 100:
             # add 'and ...', as in four hundred and ninety-eight
-            name += ' and ' + number_name (number % 100)
+            name += ' and ' + number_name(number % 100)
         return name

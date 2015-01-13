@@ -19,11 +19,11 @@
 
 MAX = 100
 
-def euler ():
+def euler():
     cache = {}
-    for base in range (2, MAX + 1):
+    for base in range(2, MAX + 1):
         accumulator = base
-        for exponent in range (2, MAX + 1):
+        for exponent in range(2, MAX + 1):
             accumulator *= base
             cache [accumulator] = True
-    return len (cache)
+    return len(cache)

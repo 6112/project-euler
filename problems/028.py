@@ -18,15 +18,15 @@
 
 SIZE = 1001
 
-def euler ():
+def euler():
     # accumulator for the sum of the numbers on the diagonal
     accumulator = 1
     # current number
     number = 1
     # for each difference between numbers, from 2 to SIZE
-    for leap in range (2, SIZE + 1, 2):
+    for leap in range(2, SIZE + 1, 2):
         # for each corner
-        for i in range (4):
+        for i in range(4):
             number += leap
             # add to the accumulator
             accumulator += number

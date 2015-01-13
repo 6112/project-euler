@@ -9,17 +9,17 @@
 
 GRID_SIZE = 21
 
-def euler ():
+def euler():
     # construct the 21x21 grid, whose elements are the number of possible paths
     # to reach that cell
-    grid = [[0 for y in range (GRID_SIZE)] for x in range (GRID_SIZE)]
+    grid = [[0 for y in range(GRID_SIZE)] for x in range(GRID_SIZE)]
     # initialize the top and left borders with 1 everywhere
-    for i in range (GRID_SIZE):
+    for i in range(GRID_SIZE):
         grid [i][0] = 1
         grid [0][i] = 1
     # for each grid cell
-    for y in range (1, GRID_SIZE):
-        for x in range (1, GRID_SIZE):
+    for y in range(1, GRID_SIZE):
+        for x in range(1, GRID_SIZE):
             # this grid is equal to the sum of the one above it, and the one to
             # its left
             grid [y][x] = grid [y - 1][x] + grid [y][x - 1]

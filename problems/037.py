@@ -15,12 +15,12 @@
 import helpers.prime as primeutils
 import helpers.sequence as sequence
 
-def euler ():
+def euler():
     accumulator = 0
     primes_found = 0
     cache = {}
-    for prime in primeutils.all_primes ():
-        if prime not in cache and is_truncatable (prime):
+    for prime in primeutils.all_primes():
+        if prime not in cache and is_truncatable(prime):
             primes_found += 1
             accumulator += prime
             cache [prime] = True
@@ -28,13 +28,13 @@ def euler ():
             break
     return accumulator
 
-def is_truncatable (number):
+def is_truncatable(number):
     if number < 10:
         return False
-    for truncation in sequence.left_truncations (str (number)):
-        if not primeutils.is_prime (int (truncation)):
+    for truncation in sequence.left_truncations(str(number)):
+        if not primeutils.is_prime(int(truncation)):
             return False
-    for truncation in sequence.right_truncations (str (number)):
-        if not primeutils.is_prime (int (truncation)):
+    for truncation in sequence.right_truncations(str(number)):
+        if not primeutils.is_prime(int(truncation)):
             return False
     return True 

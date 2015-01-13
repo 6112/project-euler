@@ -28,21 +28,21 @@
 
 import helpers.prime as prime
 
-def euler ():
+def euler():
     longest_sequence = 0
     product = 0
-    for a in range (-1000, 1000):
-        for b in range (-1000, 1000):
-            length = sequence_length (a, b)
+    for a in range(-1000, 1000):
+        for b in range(-1000, 1000):
+            length = sequence_length(a, b)
             if length > longest_sequence:
                 longest_sequence = length
                 product = a * b
     return product
 
-def sequence_length (a, b):
-    def f ():
+def sequence_length(a, b):
+    def f():
         return n ** 2 + a * n + b
     n = 0
-    while f () > 1 and prime.is_prime (f ()):
+    while f() > 1 and prime.is_prime(f()):
         n += 1
     return n

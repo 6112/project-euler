@@ -25,13 +25,13 @@
 
 import helpers.prime as prime
 
-def euler ():
+def euler():
     i = 1
     triangle = 1
     # for each triangle number
     while True:
         # if the number has over 500 divisors
-        if prime.divisor_count (triangle) > 500:
+        if prime.divisor_count(triangle) > 500:
             # return it
             return triangle
         # continue to next triangle number

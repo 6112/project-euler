@@ -11,13 +11,13 @@
 
 NUMBER = 100
 
-def euler ():
+def euler():
     # return the sum of the digits of 100!
-    return sum (map (int, str (factorial (NUMBER))))
+    return sum(map(int, str(factorial(NUMBER))))
 
-def factorial (number):
+def factorial(number):
     """Return the factorial of a number."""
     accumulator = 1
-    for n in range (1, number + 1):
+    for n in range(1, number + 1):
         accumulator *= n
     return accumulator

@@ -16,18 +16,20 @@
 
 import fractions
 
-def euler ():
-    accumulator = fractions.Fraction (1, 1)
-    for digit_1 in range (1, 10):
-        for digit_2 in range (1, 10):
-            for digit_3 in range (1, 10):
+def euler():
+    accumulator = fractions.Fraction(1, 1)
+    for digit_1 in range(1, 10):
+        for digit_2 in range(1, 10):
+            for digit_3 in range(1, 10):
                 if digit_1 != digit_2 or digit_1 != digit_3:
                     numerator = digit_1 * 10 + digit_2
                     denominator = digit_2 * 10 + digit_3
-                    original_fraction = fractions.Fraction (numerator, denominator)
+                    original_fraction = 
+                        fractions.Fraction(numerator, denominator)
                     numerator = digit_1
                     denominator = digit_3
-                    reduced_fraction = fractions.Fraction (numerator, denominator)
+                    reduced_fraction = 
+                        fractions.Fraction(numerator, denominator)
                     if original_fraction == reduced_fraction:
                         accumulator *= original_fraction
     return accumulator.denominator

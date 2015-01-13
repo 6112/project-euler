@@ -16,19 +16,19 @@
 
 import helpers.file as fileutils
 
-def euler ():
+def euler():
     # read the names from the file
-    names = fileutils.flattened_list_from_file ('data/022.txt', separator = ',',
+    names = fileutils.flattened_list_from_file('data/022.txt', separator = ',',
       convert_to = str)
     # remove the quotes surrounding the name
-    names = [name.replace ('"', '') for name in names]
+    names = [name.replace('"', '') for name in names]
     # sort the names alphabetically
-    names.sort ()
+    names.sort()
     # accumulator for the total of the name scores
     accumulator = 0
-    for index, name in enumerate (names):
+    for index, name in enumerate(names):
         # calculate the name score
-        score = sum (ord (letter) - ord ('A') + 1 for letter in name)
+        score = sum(ord(letter) - ord('A') + 1 for letter in name)
         score *= (index + 1)
         # add the score to the accumulator
         accumulator += score

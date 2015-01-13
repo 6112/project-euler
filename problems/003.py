@@ -10,8 +10,8 @@ import helpers.prime as prime
 
 BIG_NUMBER = 600851475143
 
-def euler ():
+def euler():
     # compute the prime factors of the big number
-    factors = prime.prime_factors (BIG_NUMBER)
+    factors = prime.prime_factors(BIG_NUMBER)
     # return the highest of the prime factors
-    return max (factors)
+    return max(factors)

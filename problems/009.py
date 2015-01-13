@@ -14,12 +14,12 @@ import math
 
 TARGET = 1000
 
-def euler ():
+def euler():
     # for each (a, b) pair
-    for a in range (1, TARGET):
-        for b in range (1, TARGET):
+    for a in range(1, TARGET):
+        for b in range(1, TARGET):
             # calculate c
-            c = math.sqrt (a * a + b * b)
+            c = math.sqrt(a * a + b * b)
             # return if the pair satisfies a+b+c=1000 and c is natural
-            if c == int (c) and a + b + c == TARGET:
-                return a * b * int (c)
+            if c == int(c) and a + b + c == TARGET:
+                return a * b * int(c)

@@ -16,15 +16,15 @@ import helpers.sequence as sequence
 
 ANSWER_INDEX = 1000000
 
-def euler ():
+def euler():
     # list of digits
     tokens = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
     # current permutation counter
     index = 0
     # for each permutation of the digits
-    for permutation in sequence.permutations (tokens):
+    for permutation in sequence.permutations(tokens):
         index += 1
         # if the permutation is the one we want
         if index == ANSWER_INDEX:
             # return it, as a string
-            return ''.join (map (str, permutation))
+            return ''.join(map(str, permutation))

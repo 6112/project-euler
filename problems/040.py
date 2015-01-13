@@ -18,20 +18,20 @@ import math
 
 MAX = 1000000
 
-def euler ():
+def euler():
     # calculate what the last needed number is
     last_number = 0
     size = 0
     while size < MAX:
         last_number += 1
-        size += int (math.log (MAX, 10))
+        size += int(math.log(MAX, 10))
     # construct the string
-    string = ''.join (str (number) for number in range (1, MAX + 1))
+    string = ''.join(str(number) for number in range(1, MAX + 1))
     # get the characters needed for calculations
     digits = [string [i] for i in [0, 9, 99, 999, 9999, 99999, 999999]]
     # calculate product of these digits
     accumulator = 1
     for digit in digits:
-        accumulator *= int (digit)
+        accumulator *= int(digit)
     # return the product
     return accumulator

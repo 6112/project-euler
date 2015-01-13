@@ -18,27 +18,27 @@ import helpers.prime as prime
 
 MAX = 10000
 
-def euler ():
+def euler():
     # accumulator for the sum
     accumulator = 0
     # for each value of a in the given range
-    for a in range (1, MAX):
+    for a in range(1, MAX):
         # calculate the b
-        b = d (a)
+        b = d(a)
         # if a and b are amicable
-        if b != 0 and d (b) == a and a < b:
+        if b != 0 and d(b) == a and a < b:
             # add them to the sum
             accumulator += b + a
     # return the sum accumulator
     return accumulator
 
-def d (number):
+def d(number):
     """Return the sum of the divisors of a given number.
     
     Divisors exclude the number itself, i.e.:
 
-    d (2) = 1 = 1
-    d (4) = 1 + 2 = 3
-    d (6) = 1 + 2 + 3 = 6
+    d(2) = 1 = 1
+    d(4) = 1 + 2 = 3
+    d(6) = 1 + 2 + 3 = 6
     """
-    return sum (prime.divisors (number)) - number
+    return sum(prime.divisors(number)) - number

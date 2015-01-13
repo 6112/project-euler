@@ -11,8 +11,8 @@ import helpers.prime as prime
 
 INDEX = 10000
 
-def euler ():
+def euler():
     # generate 10001 prime numbers
-    prime.generate_n_primes (INDEX + 1)
+    prime.generate_n_primes(INDEX + 1)
     # return the 10001st prime number
     return prime.prime_list [INDEX]

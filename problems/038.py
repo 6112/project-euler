@@ -18,19 +18,19 @@
 # What is the largest 1 to 9 pandigital 9-digit number that can be formed as the
 # concatenated product of an integer with (1,2, ...  , n) where n > 1?
 
-def euler ():
+def euler():
     highest = 0
-    for number in range (1, 100000):
-        string = str (number)
-        for n in range (2, 8):
-            if len (string) > 9:
+    for number in range(1, 100000):
+        string = str(number)
+        for n in range(2, 8):
+            if len(string) > 9:
                 break
-            string += str (number * n)
-            if is_pandigital (string):
-                if int (string) > highest:
-                    highest = int (string)
+            string += str(number * n)
+            if is_pandigital(string):
+                if int(string) > highest:
+                    highest = int(string)
     return highest
 
-def is_pandigital (sequence):
-    return len (sequence) == 9 and \
-      set (map (int, sequence)) == set (range (1, 10))
+def is_pandigital(sequence):
+    return len(sequence) == 9 and \
+      set(map(int, sequence)) == set(range(1, 10))

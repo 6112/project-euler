@@ -15,20 +15,20 @@ import helpers.sequence as sequence
 
 MAX = 1000000
 
-def euler ():
+def euler():
     accumulator = 0
-    for prime in primeutils.primes (MAX):
-        if is_circular (prime):
+    for prime in primeutils.primes(MAX):
+        if is_circular(prime):
             accumulator += 1
     return accumulator
 
 circular_cache = {}
-def is_circular (prime):
+def is_circular(prime):
     if prime in circular_cache:
         return circular_cache [prime]
-    for rotation in sequence.rotations (str (prime)):
-        if not primeutils.is_prime (int (''.join (rotation))):
+    for rotation in sequence.rotations(str(prime)):
+        if not primeutils.is_prime(int(''.join(rotation))):
             return False
-    for rotation in sequence.rotations (str (prime)):
-        circular_cache [int (''.join (rotation))] = True
+    for rotation in sequence.rotations(str(prime)):
+        circular_cache [int(''.join(rotation))] = True
     return True
