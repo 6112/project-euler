@@ -16,11 +16,6 @@
 # How many elements would be contained in the set of reduced proper fractions
 # for d ≤ 1,000,000?
 
-from math import sqrt
-
-from helpers.prime import generate_primes, primes
-from helpers.totient import *
-
 def euler():
     MAX = 10 ** 6
     # at the end, this table will contain all the values for totients

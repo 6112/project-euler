@@ -16,21 +16,21 @@
 # Find the value of n, 1 < n < 10**7, for which φ(n) is a permutation of n and
 # the ratio n/φ(n) produces a minimum.
 
-from helpers.prime import *
-from helpers.sequence import *
-from helpers.totient import *
+import helpers.sequence as sequence
+import helpers.prime as prime
+import helpers.discreet as discreet
 
-from math import sqrt, ceil
+import math
 
 HIGHEST_N = 10 ** 7
 
 def euler():
-    middle = ceil(sqrt(HIGHEST_N))
+    middle = math.ceil(math.sqrt(HIGHEST_N))
     for p in range(middle, 0, -1):
-        if is_prime(p):
-            for q in range(middle + 1, ceil((10 ** 7) / p)):
-                if is_prime(q):
+        if prime.is_prime(p):
+            for q in range(middle + 1, math.ceil((10 ** 7) / p)):
+                if prime.is_prime(q):
                     n = p * q
-                    t = totient(n)
-                    if is_permutation(str(n), str(t)):
+                    t = discreet.totient(n)
+                    if sequence.is_permutation(str(n), str(t)):
                         return n

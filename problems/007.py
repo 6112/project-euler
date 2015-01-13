@@ -13,6 +13,6 @@ INDEX = 10000
 
 def euler():
     # generate 10001 prime numbers
-    prime.generate_n_primes(INDEX + 1)
+    prime._generate_n_primes(INDEX + 1)
     # return the 10001st prime number
     return prime.prime_list [INDEX]

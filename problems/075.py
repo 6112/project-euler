@@ -23,7 +23,7 @@
 # Given that L is the length of the wire, for how many values of L ≤ 1,500,000
 # can exactly one integer sided right angle triangle be formed?
 
-from helpers.prime import gcd
+import helpers.discreet as discreet
 
 LIMIT = 1500000
 
@@ -32,7 +32,7 @@ def euler():
   m = 2
   while 2 * m * m < LIMIT:
     for n in range(1, m):
-      if (m - n) % 2 == 1 and gcd(m, n) == 1:
+      if (m - n) % 2 == 1 and discreet.gcd(m, n) == 1:
         a = m * m - n * n
         b = 2 * m * n
         c = m * m + n * n

@@ -16,10 +16,8 @@
 # How many fractions lie between 1/3 and 1/2 in the sorted set of reduced
 # proper fractions for d ≤ 12,000?
 
-from helpers.prime import gcd
-from helpers.prime import prime_factors
-from helpers.totient import totient
-from math import ceil
+import helpers.prime as prime
+import math
 
 DELTA = 0.0001
 MAX = 12000
@@ -28,15 +26,15 @@ def euler():
     # number of fractions found
     match_count = 0
     # for each possible numerator n
-    for n in range(2, ceil(MAX / 2) + 1):
+    for n in range(2, math.ceil(MAX / 2) + 1):
         # lowest possible denominator for a fraction in the wanted range
-        start = ceil(2 * n + DELTA)
+        start = math.ceil(2 * n + DELTA)
         # highest possible denominator for a fraction in the wanted range
         end = min(MAX, int(3 * n - DELTA))
         # construct a dictionary whose keys are all the denominators that
         # do *not* make a reduced fraction with the numerator n
         table = dict()
-        for p in prime_factors(n):
+        for p in prime.prime_factors(n):
             for q in range(p, end + 1, p):
                 table[q] = True
         # for each denominator d

@@ -1,14 +1,15 @@
 ## Module for prime number mathematics.
 
-from math import ceil, sqrt, floor
+import math
 
+# list of primes generated so far
 prime_list = [2, 3]
 
-def generate_primes (highest_value):
+def _generate_primes (highest_value):
     """Generates the list of primes prime_list which contains all prime numbers
     lower than a given number."""
     number = prime_list [-1] + 2
-    highest_test_prime = ceil (sqrt (highest_value))
+    highest_test_prime = math.ceil (math.sqrt (highest_value))
     test_primes = []
     i = 0
     while i < len (prime_list) and prime_list [i] <= highest_test_prime:
@@ -22,14 +23,14 @@ def generate_primes (highest_value):
         number += 2
     return prime_list
 
-def generate_n_primes (number_of_primes):
+def _generate_n_primes (number_of_primes):
     """Generates the list of primes prime_list which contains all the first n
     prime numbers."""
     number = prime_list [-1] + 2
     prime_count = len (prime_list)
     while prime_count < number_of_primes:
         is_a_prime = True
-        highest_test_prime = ceil (sqrt (number))
+        highest_test_prime = math.ceil (math.sqrt (number))
         i = 0
         while i < len (prime_list) and prime_list [i] <= highest_test_prime:
             is_a_prime = is_a_prime and number % prime_list [i] != 0
@@ -46,14 +47,14 @@ def all_primes (leap = 100000):
     iterator = 0
     while True:
         highest_prime += leap
-        generate_primes (highest_prime)
+        _generate_primes (highest_prime)
         while iterator < len (prime_list):
             yield prime_list [iterator]
             iterator += 1
 
 def primes (highest_value):
     """Used as an iterator for all primes up to a maximum value."""
-    generate_primes (highest_value)
+    _generate_primes (highest_value)
     i = 0
     while i < len (prime_list) and prime_list [i] <= highest_value:
         yield prime_list [i]
@@ -61,7 +62,7 @@ def primes (highest_value):
 
 def n_primes (number_of_primes):
     """Used as an iterator for the first n primes."""
-    generate_n_primes (number_of_primes)
+    _generate_n_primes (number_of_primes)
     for i in range (number_of_primes):
         yield prime_list [i]
 
@@ -69,8 +70,8 @@ def is_prime (number):
     """Returns True if a given integer is a prime number."""
     if number == 1:
         return False
-    highest_divisor = floor (sqrt (number))
-    generate_primes(highest_divisor)
+    highest_divisor = math.floor (math.sqrt (number))
+    _generate_primes(highest_divisor)
     return all (number % prime != 0 for prime in primes (highest_divisor))
 
 prime_factors_cache = {1: []}
@@ -85,7 +86,7 @@ def prime_factors (number, use_cache = True):
     if number in prime_factors_cache:
         return prime_factors_cache [number]
     factors = []
-    highest_divisor = floor (sqrt (number))
+    highest_divisor = math.floor (math.sqrt (number))
     for prime in primes (highest_divisor):
         if number % prime == 0:
             factors = prime_factors (prime) + prime_factors (number // prime)
@@ -136,21 +137,3 @@ def divisors (number, use_cache = True):
     if use_cache:
         divisors_cache [number] = result
     return result
-
-def gcd(a, b):
-    if a == b:
-        return a
-    if a == 0:
-        return b
-    if b == 0:
-        return a
-    if a % 2 == 0:
-        if b % 2 == 1:
-            return gcd(a / 2, b)
-        else:
-            return gcd(a / 2, b / 2) * 2
-    if b % 2 == 0:
-        return gcd(a, b / 2)
-    if a > b:
-        return gcd((a - b) / 2, b)
-    return gcd((b - a) / 2, a)
