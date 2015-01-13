@@ -11,7 +11,7 @@ In order to calculate the solution to a specific problem, simply use the run
 script in the project's root directory, and give it the problem number. For
 instance, if you want to calculate the answer for problem #42:
 
-      ./run 42
+	./run 42
 
 For some problems, it may take some time before the answer is calculated. For
 most problems, the answer is given within 5 seconds; but it can take a lot more
