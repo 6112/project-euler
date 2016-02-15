@@ -1,6 +1,7 @@
 ## Module for prime number mathematics.
 
 import math
+import collections
 
 # list of primes generated so far
 prime_list = [2, 3]
@@ -78,9 +79,9 @@ prime_factors_cache = {1: []}
 def prime_factors (number, use_cache = True):
     """Returns a list of all primes that are divisors of a given integer
     number.
-    
+
     The list contains only prime numbers, whose product is equal to the original
-    number""" 
+    number"""
     if is_prime (number):
         return [number]
     if number in prime_factors_cache:
@@ -94,17 +95,17 @@ def prime_factors (number, use_cache = True):
                 prime_factors_cache [number] = factors
             return factors
 
-def dictionary_prime_factors (number, use_cache = True):
+def multiset_prime_factors (number, use_cache = True):
     """Returns the same list of prime factors as the prime_factors() function,
     but reduces as a dictionary mapping each factor to its number of occurences.
 
     For instance, [2,2,2, 3, 5,5] becomes {2:3, 3:1, 5:2}."""
     factors = prime_factors (number, use_cache)
     unique_factors = list (set (factors))
-    dictionary = {}
+    bag = collections.Counter()
     for factor in unique_factors:
-        dictionary [factor] = factors.count (factor)
-    return dictionary
+        bag [factor] = factors.count (factor)
+    return bag
 
 def divisor_count (number, use_cache = True):
     """Returns the number of integers that can evenly divide a given number."""
@@ -117,7 +118,7 @@ def divisor_count (number, use_cache = True):
 divisors_cache = {}
 def divisors (number, use_cache = True):
     """Returns a list of the divisors of a given number."""
-    if number in divisors_cache: 
+    if number in divisors_cache:
         return divisors_cache [number]
     prime_divisors = prime_factors (number, use_cache)
     divisors_dictionary = {}

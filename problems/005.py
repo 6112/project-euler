@@ -18,7 +18,7 @@ def euler():
     # for each number in the desired range
     for number in range(2, HIGHEST_DIVISOR + 1):
         # calculate its prime factors
-        factors = prime.dictionary_prime_factors(number)
+        factors = prime.multiset_prime_factors(number)
         # for each of those factors, and its power
         for factor, power in factors.items():
             # if that factor's power is higher than the one we had before

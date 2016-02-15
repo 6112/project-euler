@@ -43,4 +43,4 @@ def euler():
 
 def prime_factor_count(n):
     """Returns the number of distinct prime factors of a number."""
-    return len(prime.dictionary_prime_factors(n))
+    return len(prime.multiset_prime_factors(n))
