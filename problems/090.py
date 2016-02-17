@@ -1,5 +1,5 @@
 # encoding=utf-8
-## SOLVED
+## SOLVED 2016/02/17
 ## 1217
 
 # Each of the six faces on a cube has a different digit (0 to 9) written on it;
