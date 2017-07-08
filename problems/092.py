@@ -18,8 +18,6 @@
 
 from collections import defaultdict
 
-MAX = 1 * 10 ** 6
-
 def factorial(n):
     """Return the `n!`."""
     acc = 1
