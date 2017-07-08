@@ -133,7 +133,7 @@ problem_descriptions = {
     88: "product-sum numbers",
     89: "roman numerals",
     90: "cube digit pairs",
-    91: "",
+    91: "right triangles with integer coordinates",
 }
 
 if __name__ == '__main__':
