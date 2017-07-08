@@ -129,10 +129,10 @@ problem_descriptions = {
     84: "monopoly odds",
     85: "counting rectangles",
     86: "cuboid route",
-    87: "prime power triples"
+    87: "prime power triples",
     88: "product-sum numbers",
     89: "roman numerals",
-    90: "cube digit pairs"
+    90: "cube digit pairs",
 }
 
 if __name__ == '__main__':
