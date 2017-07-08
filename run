@@ -134,6 +134,7 @@ problem_descriptions = {
     89: "roman numerals",
     90: "cube digit pairs",
     91: "right triangles with integer coordinates",
+    92: "square digit chains",
 }
 
 if __name__ == '__main__':
