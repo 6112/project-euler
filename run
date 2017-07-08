@@ -135,6 +135,7 @@ problem_descriptions = {
     90: "cube digit pairs",
     91: "right triangles with integer coordinates",
     92: "square digit chains",
+    93: "arithmetic expressions",
 }
 
 if __name__ == '__main__':
