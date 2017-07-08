@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 import sys
 import importlib
@@ -27,13 +27,13 @@ def main():
     title = "(problem title missing)"
     if problem in problem_descriptions:
         title = problem_descriptions[problem]
-        print('Solving problem #{0}: {1}.'.format(problem, title))
-        print('Calculating (this may take some time)...')
-        before = timeit.default_timer()
-        result = module.euler()
-        after = timeit.default_timer()
-        print('The answer for problem #{0} is {1}.'.format(problem, result))
-        print('Calculation took {0:.3f} seconds.'.format(after - before))
+    print('Solving problem #{0}: {1}.'.format(problem, title))
+    print('Calculating (this may take some time)...')
+    before = timeit.default_timer()
+    result = module.euler()
+    after = timeit.default_timer()
+    print('The answer for problem #{0} is {1}.'.format(problem, result))
+    print('Calculation took {0:.3f} seconds.'.format(after - before))
 
 def print_help():
     """Prints a message to show what arguments this program takes."""
@@ -133,6 +133,7 @@ problem_descriptions = {
     88: "product-sum numbers",
     89: "roman numerals",
     90: "cube digit pairs",
+    91: "",
 }
 
 if __name__ == '__main__':
