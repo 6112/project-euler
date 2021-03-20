@@ -24,6 +24,7 @@ def euler():
         n1 = round(math.sqrt((m * m + 1) / 3))
         n2 = 2*m-round(math.sqrt(12*m*m))//2
         for n in set([n1, n2]):
+            # Euclid's formula for generating pythagorean triples.
             a = m * m - n * n
             b = 2 * m * n
             c = m * m + n * n
