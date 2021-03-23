@@ -136,6 +136,8 @@ problem_descriptions = {
     91: "right triangles with integer coordinates",
     92: "square digit chains",
     93: "arithmetic expressions",
+    94: "almost equilateral triangles",
+    95: "amicable chains",
 }
 
 if __name__ == '__main__':
